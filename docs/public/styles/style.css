@@ -69,11 +69,6 @@ h1, h2, h3, h4 {
   color: #155799;
   font-family: 'Bai Jamjuree', sans-serif; }
 
-h6 {
-  color: #155799;
-  font-family: 'Bai Jamjuree', sans-serif;
-  font-size: smaller;
-}
 
 a {
   cursor: pointer; }
@@ -165,7 +160,7 @@ main {
 
 .gradient-banner {
   background: #155799;
-  background: linear-gradient(225deg, rgba(21, 87, 153, 0.8) 0%, rgba(21, 153, 87, 0.8) 100%), url("../imgs/banner.jpg");
+  background: linear-gradient(225deg, rgba(21, 87, 153, 0.8) 0%, rgba(21, 153, 87, 0.8) 100%), url("../assets/banner.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover; }
@@ -194,7 +189,8 @@ main {
   transform: translate(-50%); }
 
 .home-main > section:nth-child(2n) {
-  background-color: white; }
+  background-color: white;
+}
 
 .home-main > section:nth-child(2n+1) {
   background-color: #F6F6F6; }
@@ -282,6 +278,23 @@ main {
 .bs-tooltip-auto[x-placement^=bottom] .arrow::before,
 .bs-tooltip-bottom .arrow::before {
   border-bottom-color: white;
+}
+
+.dropdown-menu-collapsed {
+  background-color: transparent;
+  color: rgba(255, 255, 255, .5);
+  padding-top: 0px;
+  border: none;
+}
+
+.dropdown-item-collapsed {
+  color: rgba(255, 255, 255, .5);
+  padding-top: 0px;
+}
+
+.dropdown-item-collapsed:hover {
+  background-color: transparent;
+  color: rgba(255, 255, 255, .5);
 }
 
 
@@ -440,6 +453,15 @@ section#subsec-faq div h3 {
   color: rgba(34, 34, 34, 0.7);
   margin: 0; }
 
+ .pr-card {
+    background-color: transparent; 
+    border: none; 
+    }
+
+ .pr-header {
+  background-color: transparent;
+  border-bottom: none;
+}
 
 /* Modal */
  .modal-wrapper{
@@ -470,7 +492,7 @@ section#subsec-faq div h3 {
 
 .btn-modal {
   position: absolute;
-  font-size: 1.5em;
+  font-size: 1.5rem;
   top: -20px;
   right: -20px;
   width: 50px;
@@ -487,6 +509,15 @@ section#subsec-faq div h3 {
   position: absolute;
   top: 2px;
   text-align: center;
+}
+
+
+span.fa-angle-down {
+  color: #155799;
+}
+
+span.fa-angle-down:hover {
+  color: rgb(21, 87, 153, 0.4);
 }
 
 /* Loader */
@@ -652,6 +683,10 @@ section#subsec-faq div h3 {
 @media (max-width: 992px) {
   #navbarNavDropdown {
     flex-direction: column; }
+
+  .navbar {
+    background-color: transparent;
+  }
 
   #navbarNavDropdown ul {
     margin-right: auto !important; } }

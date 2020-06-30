@@ -64,10 +64,16 @@ $(document).ready(function () {
     });
 
     $('.navbar-toggler').click(function (e) {
-        if ($(this).hasClass('collapsed'))
+        if ($(this).hasClass('collapsed')) {
             navbar.css('background-color', 'rgba(0, 0, 0, 0.6)');
-        else
+            $('.dropdown-menu').addClass('dropdown-menu-collapsed');
+            $('.dropdown-item').addClass('dropdown-item-collapsed');
+        }
+        else {
             navbar.css('background-color', 'transparent');
+            $('.dropdown-menu').removeClass('dropdown-menu-collapsed');
+            $('.dropdown-item').removeClass('dropdown-item-collapsed');
+        }
     });
 
     if (btnDown.length) {
@@ -273,74 +279,6 @@ function scrollToNextSection() {
     });
 
     scrollToDiv('#' + divToScroll.attr('id'));
-}
-
-function updatePaymentStatus() {
-    showLoader(0, '.status');
-
-    $.ajax({
-        type: "get",
-        url: "updatePayment",
-        dataType: "json",
-        success: function (response) {
-            hideLoader();
-            if (response['success']) {
-
-                let status = response['message'];
-                let statusLabel = $('.status-label > div').find('div'),
-                    statusText = $('.status-text'),
-                    listGroups = $('.list-group-container'),
-                    widget = $('.sympla-widget');
-
-                let cls, msg;
-
-                if (status == 'A') {
-                    widget.hide();
-                    listGroups.show();
-                    cls = 'status-ball-green';
-                    msg = 'Inscrição realizada';
-                } else {
-                    listGroups.hide();
-                    widget.show();
-
-                    switch (status) {
-                        case 'P':
-                            cls = 'status-ball-yellow';
-                            msg = 'Inscrição realizada';
-                            break;
-                        case 'NA':
-                            cls = 'status-ball-orange';
-                            msg = 'Pagamento não aprovado';
-                            break;
-                        case 'NP':
-                            cls = 'status-ball-orange';
-                            msg = 'Pagamento não concluido';
-                            break;
-                        case 'R':
-                            cls = 'status-ball-orange';
-                            msg = 'Reembolso solicitado';
-                            break;
-                        case 'C':
-                            cls = 'status-ball-red';
-                            msg = 'Pagamento cancelado';
-                            break;
-                        default:
-                            break;
-                    }
-
-                }
-
-                statusLabel.attr('class', cls);
-                statusText.html(msg);
-            } else {
-                //não fazer nada
-                console.log(response['message']);
-            }
-        },
-        error: function (e) {
-            console.log(e);
-        }
-    });
 }
 
 function highlightNavItem() {
