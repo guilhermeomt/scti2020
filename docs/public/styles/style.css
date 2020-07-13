@@ -118,11 +118,13 @@ main {
 
 .gradient {
   background: #155799;
-  background: linear-gradient(225deg, #155799 0%, #159957 100%); }
+  background: linear-gradient(225deg, #460336 0%, #01366c 100%); 
+
+}
 
 .text-gradient {
   background: #155799;
-  background: linear-gradient(225deg, #155799 0%, #159957 100%);
+  background: linear-gradient(225deg,#460336 0%,#01366c 100%), url("../imgs/banner.jpg");
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent; }
@@ -160,7 +162,7 @@ main {
 
 .gradient-banner {
   background: #155799;
-  background: linear-gradient(225deg, rgba(21, 87, 153, 0.8) 0%, rgba(21, 153, 87, 0.8) 100%), url("../assets/banner.jpg");
+  background: linear-gradient(225deg,#460336 0%,#01366c 100%), url("../imgs/banner.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover; }
