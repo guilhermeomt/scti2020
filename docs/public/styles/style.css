@@ -124,7 +124,6 @@ main {
 }
 
 .text-gradient {
-  background: #155799;
   background: linear-gradient(225deg,#460336 0%,#01366c 100%);
   -webkit-background-clip: text;
   background-clip: text;
