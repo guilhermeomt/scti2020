@@ -125,7 +125,7 @@ main {
 
 .text-gradient {
   background: #155799;
-  background: linear-gradient(225deg,#460336 0%,#01366c 100%), url("../imgs/banner.jpg");
+  background: linear-gradient(225deg,#460336 0%,#01366c 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent; }
@@ -163,7 +163,7 @@ main {
 
 .gradient-banner {
   background: #155799;
-  background: linear-gradient(225deg,#460336 0%,#01366c 100%), url("../imgs/banner.jpg");
+  background: linear-gradient(225deg,#460336 0%,#01366c 100%);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover; }
@@ -186,7 +186,7 @@ main {
   height: 2px;
   position: absolute;
   background: #155799;
-  background: linear-gradient(225deg, #155799 0%, #159957 100%);
+  background: linear-gradient(225deg,#460336 0%,#01366c 100%);
   left: 50%;
   bottom: 0;
   transform: translate(-50%); }
@@ -432,7 +432,8 @@ section#subsec-faq div h3 {
   transform: translate(-50%, -50%);
   border-radius: 100%;
   z-index: 0;
-  background: linear-gradient(225deg, #155799 0%, #159957 100%); }
+  background: linear-gradient(225deg,#460336 0%,#01366c 100%);
+}
 
 .day-circle:hover {
   background: rgba(255, 255, 255, 0);
