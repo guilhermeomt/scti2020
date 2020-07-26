@@ -70,7 +70,7 @@
                             <a class=" nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
                                 aria-haspopup="true" aria-expanded="false">Edições Anteriores</a>
                             <div class="dropdown-menu">
-                                <a class="dropdown-item" href="./scti2019.html">SCTI 2019</a>
+                                <a class="dropdown-item" href="./public/2019/scti2019.html">SCTI 2019</a>
                         </li>
                     </ul>
                     <ul class="navbar-nav">
@@ -187,7 +187,7 @@
                             <hr>
                         </div>
 
-                        <section id="subsec-pr" class="col-12 col-sm-12 col-xl-9 pt-3">
+                        <section id="subsec-pr" class="col-12 col-sm-12 col-xl-9 pb-3 pt-3">
                             <h3 class="text-center">Perguntas e Respostas</h3>
 
                             <div id="accordion" class="row d-flex justify-content-center mt-3 mb-3">
@@ -284,7 +284,7 @@
             </section>
 
 
-            <section id="sec-patrocinadores" class="container-fluid d-flex justify-content-center"
+            <section id="sec-patrocinadores" class="container-fluid d-flex justify-content-center pb-3"
                 style="background-color: rgb(249, 249, 249);">
                 <div class="col-12 col-sm-11 col-xl-10">
                     <h3 class="text-center">Apoio institucional</h3>
@@ -312,35 +312,34 @@
                                 Tem uma empresa e gostaria de apoiar o evento?<br>
                                 Entre em contato com a gente e siga nossas redes sociais!</p>
 
-                            <div class="col-12">
-                                <div class="row mb-2">
-                                    <div class="col-12 col-md-4 col-lg-3">
-                                        <div class="row mb-3">
-                                            <a class="col-2" href="tel:" rel="noopener" title="Telefone"><i
-                                                    class="fas fa-phone text-gradient" aria-hidden="true"></i></a>
-                                            <div class="col-10">(??) ?????-????<br>(??) ?????-????</div>
-                                        </div>
+                            <div class="row mb-2">
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="row mb-3">
+                                        <a class="col-2" href="https://api.whatsapp.com/send?phone=#" rel="noopener"
+                                            title="Telefone"><i class="fab fa-whatsapp text-gradient"
+                                                aria-hidden="true"></i></a>
+                                        <div class="col-10">(??) ?????-????<br>(??) ?????-????</div>
                                     </div>
-                                    <div class="col-12 col-md-4 col-lg-3">
-                                        <div class="row mb-3">
-                                            <a class="col-2" href="mailto:sctiuenf@gmail.com" rel="noopener"
-                                                title="Email"><i class="fas fa-envelope text-gradient"
-                                                    aria-hidden="true"></i></a>
-                                            <div class="col-10">sctiuenf@gmail.com</div>
-                                        </div>
-                                    </div>
-                                    <div class="col-12 col-md-4 col-lg-6">
-                                        <div class="row">
-                                            <div class="col-2 col-lg-1 ml-lg-4"><i
-                                                    class="fas fa-map-marker-alt text-gradient" aria-hidden="true"></i>
-                                            </div>
-                                            <div class="col-10 col-lg-10">Universidade Estadual do Norte Fluminense
-                                                Darcy Ribeiro, Av. Alberto Lamego, 2000 - Parque Califórnia, Campos dos
-                                                Goytacazes - RJ, CEP: 28013-602</div>
-                                        </div>
-                                    </div>
-
                                 </div>
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="row mb-3">
+                                        <a class="col-2" href="mailto:sctiuenf@gmail.com" rel="noopener"
+                                            title="Email"><i class="fas fa-envelope text-gradient"
+                                                aria-hidden="true"></i></a>
+                                        <div class="col-10">sctiuenf@gmail.com</div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-4 col-lg-6">
+                                    <div class="row">
+                                        <div class="col-2 col-lg-1 ml-lg-4"><i
+                                                class="fas fa-map-marker-alt text-gradient" aria-hidden="true"></i>
+                                        </div>
+                                        <div class="col-10 col-lg-10">Universidade Estadual do Norte Fluminense
+                                            Darcy Ribeiro, Av. Alberto Lamego, 2000 - Parque Califórnia, Campos dos
+                                            Goytacazes - RJ, CEP: 28013-602</div>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
 
@@ -368,9 +367,6 @@
                             </div>
                         </div>
                     </div>
-
-
-                </div>
                 </div>
             </section>
             <!--     <div style="position:relative; overflow:hidden; height: 200px; width: 100%;">
@@ -406,7 +402,7 @@
         <!-- Loader -->
 
 
-        <!-- Modal -->
+        <!-- Sign-Up Modal -->
         <div class="modal-wrapper">
             <div class="custom-modal">
                 <button class="btn btn-modal" onclick="toggleModal()">x</button>
@@ -425,13 +421,13 @@
                                 <label for="email" class="label-float">Email</label>
                             </div>
                             <div class="row">
-                                <div class="col-sm-6">
+                                <div class="col-12 col-lg-6">
                                     <div class="form-group">
                                         <input id="cpf" class="form-control" name="cpf" type="text" required>
                                         <label for="cpf" class="label-float">CPF</label>
                                     </div>
                                 </div>
-                                <div class="col-sm-6">
+                                <div class="col-12 col-lg-6">
                                     <div class="form-group">
                                         <input id="phone" pattern="[\(][0-9]{2}[\)] [0-9]{1} [0-9]{4}[\-][0-9]{4}"
                                             class="form-control" name="phone" type="tel" maxlength="16">
@@ -447,7 +443,7 @@
                 </div>
             </div>
         </div>
-        <!-- Modal -->
+        <!-- Sign-Up Modal -->
 
     </body>
 
