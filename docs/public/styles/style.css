@@ -66,7 +66,7 @@ ul {
   list-style: none; }
 
 h1, h2, h3, h4 {
-  color: #155799;
+  color: #01366c;
   font-family: 'Bai Jamjuree', sans-serif; }
 
 
@@ -100,7 +100,8 @@ main {
   cursor: not-allowed; }
 
 .main-logo {
-  width: 15%;
+  width: 12%;
+  margin: 35px;
   min-width: 150px;
   height: auto; }
 
@@ -118,11 +119,12 @@ main {
 
 .gradient {
   background: #155799;
-  background: linear-gradient(225deg, #155799 0%, #159957 100%); }
+  background: linear-gradient(225deg, #460336 0%, #01366c 100%); 
+
+}
 
 .text-gradient {
-  background: #155799;
-  background: linear-gradient(225deg, #155799 0%, #159957 100%);
+  background: linear-gradient(225deg,#460336 0%,#01366c 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent; }
@@ -160,7 +162,7 @@ main {
 
 .gradient-banner {
   background: #155799;
-  background: linear-gradient(225deg, rgba(21, 87, 153, 0.8) 0%, rgba(21, 153, 87, 0.8) 100%), url("../assets/banner.jpg");
+  background: linear-gradient(225deg,#460336 0%,#01366c 100%);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover; }
@@ -183,7 +185,7 @@ main {
   height: 2px;
   position: absolute;
   background: #155799;
-  background: linear-gradient(225deg, #155799 0%, #159957 100%);
+  background: linear-gradient(225deg,#460336 0%,#01366c 100%);
   left: 50%;
   bottom: 0;
   transform: translate(-50%); }
@@ -310,7 +312,7 @@ section#subsec-faq div h3 {
 
 .btn-3d-primary {
   position: relative;
-  background-color: #155799;
+  background-color: #01366c;
   color: #FEFEFE;
   -webkit-box-shadow: 0px 6px 0px 0px #0E3862;
   -moz-box-shadow: 0px 6px 0px 0px #0E3862;
@@ -428,7 +430,8 @@ section#subsec-faq div h3 {
   transform: translate(-50%, -50%);
   border-radius: 100%;
   z-index: 0;
-  background: linear-gradient(225deg, #155799 0%, #159957 100%); }
+  background: linear-gradient(225deg,#460336 0%,#01366c 100%);
+}
 
 .day-circle:hover {
   background: rgba(255, 255, 255, 0);
@@ -499,7 +502,7 @@ section#subsec-faq div h3 {
   padding: 0px;
   border-radius: 50%;
   border: 5px solid white;
-  background-color: #155799;
+  background-color: #01366c;
   color: white;
   box-shadow: 0 3px 5px 0 rgba(0, 0, 0, .3);
 }
