@@ -120,7 +120,6 @@ main {
 .gradient {
   background: #155799;
   background: linear-gradient(225deg, #460336 0%, #01366c 100%); 
-
 }
 
 .text-gradient {
@@ -173,6 +172,12 @@ main {
 .home-main section:first-child {
   padding: 2rem;
   padding-top: 50px; }
+
+#home-main section:first-child section  {
+  width: auto;
+  background-color: #F1F1F1;
+  border-radius: 30px;
+}
 
 .home-main section:not(:first-child) {
   padding-top: 4rem;
@@ -305,10 +310,6 @@ main {
 i {
   font-size: 1.8em;
   margin-right: 1rem; }
-
-section#subsec-faq div h3 {
-  font-size: 30px;
-}
 
 .btn-3d-primary {
   position: relative;
