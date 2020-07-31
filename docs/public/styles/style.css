@@ -161,7 +161,7 @@ main {
 
 .gradient-banner {
   background: #155799;
-  background: linear-gradient(225deg,#460336 0%,#01366c 100%);
+  background: linear-gradient(225deg,rgba(70, 3, 54, 0.8) 0%,rgba(1, 54, 108, 0.8) 100%), url("../assets/Fundo\ 3.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover; }
@@ -513,7 +513,6 @@ i {
   top: 2px;
   text-align: center;
 }
-
 
 span.fa-angle-down {
   color: #155799;

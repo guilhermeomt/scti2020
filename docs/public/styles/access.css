@@ -6,21 +6,51 @@
 /*verde escuro*/
 
 main.access-main {
-  background-image: url("../assets/Fundo\ 3.png");
-  background-repeat: no-repeat; 
+  background-image: linear-gradient(50deg,rgba(0, 0, 0, 0.8) 0%,rgba(0, 0, 0, 0.5) 90%), url("../assets/Fundo\ 3.png");
+  background-repeat: no-repeat;
   background-size: cover;
   height: 95% !important;
   min-height: 95%; }
 
 footer {
-  padding: .7rem; 
+  height: fit-content;
+}
+  
+.error-box {
+  position: relative;
+  background: linear-gradient(50deg,#770000 0%,#c71808f5 90%);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.6); 
+  width: 100%;
+  height: fit-content;
+  display: none !important;
+}
+
+
+.validation-error-text {
+  color: #FFF;
+}
+
+.btn-close {
+  position: absolute;
+  right: 10px;
+  margin: 0 0 0 10px;
+  color: rgba(29, 0, 0, 0.7);
+  cursor: pointer;
 }
 
 .return-home {
-  color: #FEFEFE;
-  top: 20px;
-  font-size: 11px;
-  opacity: .5;
+  font-family: 'Open Sans';
+  color: #FFF;
+  position: relative;
+  top: -3.5rem;
+  font-size: 1rem;
+  opacity: .8;
+}
+
+.return-home:hover {
+  color: #FFF;
+  text-decoration: none;
+  opacity: 1;
 }
 
 .access-card.register-card {
@@ -34,10 +64,12 @@ footer {
   position: relative;
   max-width: 100%;
   width: 32em;
-  background: linear-gradient(225deg,#460336 0%,#01366c 100%);
+  background: rgba(29, 1, 46, 0.7);
   padding: 9rem 0 4rem 0;
   border-radius: .25rem;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); }
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); 
+  animation: modal .5s;
+}
 
 .translated-label, .form-control:focus + label {
   color: #FEFEFE; }

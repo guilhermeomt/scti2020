@@ -287,3 +287,8 @@ function highlightNavItem() {
     $('.nav-item').removeClass('active');
     $('#link-to-' + secId).parent().addClass('active');
 }
+
+function closeValidationErrorBox() {
+    $('.error-box').removeClass('d-flex');
+    $('.error-box').addClass('d-none');    
+}
