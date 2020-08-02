@@ -6,14 +6,20 @@
 /*verde escuro*/
 
 main.access-main {
-  background-image: linear-gradient(50deg,rgba(0, 0, 0, 0.8) 0%,rgba(0, 0, 0, 0.5) 90%), url("../assets/Fundo\ 3.png");
+  background: linear-gradient(225deg,rgba(70, 3, 54, 0.8) 0%,rgba(1, 54, 108, 0.8) 100%), url("../assets/Fundo\ 3.png");
+  background-repeat: no-repeat; 
   background-repeat: no-repeat;
   background-size: cover;
-  height: 95% !important;
-  min-height: 95%; }
+  height: 93% !important;
+  min-height: 93%; }
 
 footer {
-  height: fit-content;
+  height:7% !important; 
+  background: none;
+}
+
+access-color{
+  color: #01366c;
 }
   
 .error-box {
@@ -24,7 +30,6 @@ footer {
   height: fit-content;
   display: none !important;
 }
-
 
 .validation-error-text {
   color: #FFF;
@@ -64,21 +69,30 @@ footer {
   position: relative;
   max-width: 100%;
   width: 32em;
-  background: rgba(29, 1, 46, 0.7);
-  padding: 9rem 0 4rem 0;
-  border-radius: .25rem;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); 
+  background-color: white;
+  padding: 6rem 0 2rem 0;
+  border-radius: 10px;
+  box-shadow: 2px 2px 2px -3px rgba(60, 60, 60, 0.5);
   animation: modal .5s;
 }
 
 .translated-label, .form-control:focus + label {
   color: #FEFEFE; }
 
+.login-title{
+  color: #01366c;
+}
+
+.login-title:hover{
+  color: #01366c;
+}
+
 .access-card-title {
   position: absolute;
   top: .5em;
-  left: .5em; }
-
+  left: .5em;
+  line-height: .9em;
+ }
 .access-btns button {
   margin-left: 1rem; }
 
@@ -86,13 +100,17 @@ main {
   min-height: fit-content;
   padding: 5rem 0 3rem 0; }
 
+.access-footer{
+    background: linear-gradient(225deg,#460336 0%,#01366c 100%);
+}
+
 @media (max-width: 492px) {
   .access-btns-container {
     flex-direction: column-reverse;
     margin-top: 1rem !important; }
 
   .access-card {
-    padding: 8rem 0 2rem 0; }
+    padding: 6rem 0 2rem 0; }
 
   .access-btns {
     flex-direction: column;
@@ -114,3 +132,152 @@ main {
     height: fit-content !important; } }
 
 /*# sourceMappingURL=access.css.map */
+
+/* Form */
+
+input{
+  outline: none;
+  border: none;
+}
+
+.input-access{
+  font-size: 15px;
+  line-height: 1.5;
+  color: #666666;
+  display: block;
+  width: 100%;
+  background: #e6e6e6;
+  height: 50px;
+  border: none;
+  border-radius: 25px;
+  padding: 0 30px 0 68px;
+}
+
+.input-access-password{
+  margin-top: -30px;
+}
+
+.access-bt-forgot{
+  margin-top: 30px;
+  margin-bottom: inherit;
+}
+
+.access-a-forgot{
+  padding-bottom: 10px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.access-a-forgot a{
+  color: #666666;
+}
+
+.access-a-forgot a:hover{
+  color: #01366c;
+  text-decoration: none;
+  transition: 0.2s ease-in;
+}
+
+.input-access-forgot{
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+.input-access:focus{
+  outline: none;
+  background: #e6e6e6;
+  box-shadow: none;
+  border: none;  
+  box-shadow: 0px 0px 0px 0px;
+  color: #01366c;
+  -webkit-animation: anim-shadow 0.5s ease-in-out;
+  animation: anim-shadow 0.5s ease-in-out;
+}
+
+.input-access:focus + .access-icon {
+  color: #01366c;
+}
+
+@-webkit-keyframes anim-shadow {
+  to {
+    box-shadow: 0px 0px 7px 2px;
+    background: #e6e6e6;
+  }
+}
+
+@keyframes anim-shadow {
+  to {
+    box-shadow: 0px 0px 7px 2px;
+  }
+}
+
+.icon-background{
+  background-repeat: no-repeat;
+  opacity: 0.4;
+  background-position: left 1.5em top 50%,0 0;
+  background-size: 25px auto, 100%;
+}
+
+.label-input-access{
+  left: 20px;
+  top: 10px;
+}
+  
+label{
+  display: grid;
+  grid-template-columns: 1fr 40px;
+}
+
+.access-icon {
+  position: absolute;
+  opacity: 0.6;
+  transition: 0.4s;
+  top: 14px;
+  left: 25px;
+}
+
+
+.access-forgot{
+  display: grid;
+  grid-template-rows:1fr 1fr ;
+}
+
+.btn-forgot{
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 1.5;
+  color: #fff;
+  text-transform: uppercase;
+  height: 50px;
+  border-radius: 25px;
+  background: #01366c;
+  justify-content: center;
+  align-items: center;
+  padding: 0 25px;
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.6s;
+}
+
+
+.btn-forgot-primary{
+  background: #01366c;
+}
+
+
+.btn-forgot-secondary{
+  background: #aaaaaa;
+}
+
+.btn-forgot-primary:hover{
+  background: #01376cb9;
+  color: white;
+}
+
+.btn-forgot-secondary:hover{
+  background: #aaaaaa96;
+  color: white;
+}
+
+

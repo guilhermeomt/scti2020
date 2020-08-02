@@ -14,24 +14,25 @@
     <meta name="Description"
         content="Website da Semana Acadêmica de Ciência da Computação e Tecnologia da Informação da Universidade Estadual Darcy Ribeiro - UENF. Saiba mais sobre um dos maiores e melhores eventos de tecnologia da região.">
 
-    <link rel="icon" href="public/assets/favicon.ico">
+    <link rel="icon" href="../public/assets/favicon.ico">
 
-    <link rel="stylesheet" type="text/css" href="public/styles/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="public/styles/style.css">
-    <link rel="stylesheet" type="text/css" href="public/styles/slick.css">
-    <link rel="stylesheet" type="text/css" href="public/styles/account.css">
-    <link rel="stylesheet" type="text/css" href="public/styles/access.css">
-
-
-
-    <link href="public/styles/css(1).css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../public/styles/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../public/styles/style.css">
+    <link rel="stylesheet" type="text/css" href="../public/styles/slick.css">
+    <link rel="stylesheet" type="text/css" href="../public/styles/account.css">
+    <link rel="stylesheet" type="text/css" href="../public/styles/access.css">
 
 
-    <script src="public/scripts/jquery-3.4.1.min.js"></script>
-    <script src="public/scripts/popper.js"></script>
-    <script src="public/scripts/bootstrap.min.js"></script>
-    <script src="public/scripts/fontawesome.js"></script>
-    <link rel="stylesheet" href="public/styles/free.css" media="all">
+
+    <link href="../public/styles/css(1).css" rel="stylesheet">
+
+
+    <script src="../public/scripts/jquery-3.4.1.min.js"></script>
+    <script src="../public/scripts/popper.js"></script>
+    <script src="../public/scripts/bootstrap.min.js"></script>
+    <script src="../public/scripts/fontawesome.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="../public/styles/free.css" media="all">
 
 </head>
 
@@ -45,41 +46,40 @@
     </div>
 
     <main class="access-main container-fluid">
-
+        <canvas id="drawCanvas" width="1519" height="722"></canvas>
 
         <div>
-            <a class="return-home" href="https://www.scti.uenf.br/#">
+            <a class="return-home" href="../">
                 <i class="fa fa-chevron-left fa-1x">
                 </i>
                 Voltar para Home
             </a>
         </div>
+
         <div class="d-flex  h-100 justify-content-center align-items-center m-0">
             <div class="access-card login-card justify-content-center align-items-center">
-                <h1 class="mb-4 light-color access-card-title">Login</h1>
+                <h1 class="mb-4 access-color login-title access-card-title">Login</h1>
                 <div class="row w-100 justify-content-center">
                     <div class="col-12 col-sm-11">
                         <form class="w-100" id="authenticate" method="post">
                             <div class="form-group mb-5">
-                                <input id="signin-email" class="form-control" required="" name="email" type="email">
-                                <label class="label-float" for="signin-email">
-                                    Email</label>
+                                <input id="signin-email" class="form-control input-access" placeholder="Email" required="" name="email" type="email">
+                                <i class="material-icons access-icon">email</i>
                             </div>
-                            <div class="row align-items-center form-group m-0">
-                                <input id="signin-password" class="form-control" required="" name="password"
-                                    type="password">
-                                <label class="label-float" for="signin-password">
-                                    Senha
-                                </label>
+                            <div class="form-group m-0">
+                                <input id="signin-password" class="form-control input-access input-access-password" placeholder="Senha" required="" name="password" type="password">                                
+                                <i class="material-icons access-icon">vpn_key</i>
+                                
+                                
                             </div>
 
                             <div class="access-btns-container d-flex justify-content-between mt-4">
-                                <div class="d-flex access-btns">
-                                    <input class="btn btn-3d-secondary" type="submit" value="Entrar">
+                                <div class="d-flex">
+                                    <input class="btn-primary btn-base" type="submit" value="Entrar">
 
                                 </div>
 
-                                <div class="forgot-btn">
+                                <div class="access-a-forgot">
                                     <a id="show-forgot-card" class="light-color" href="#">Esqueci minha senha</a>
                                 </div>
                             </div>
@@ -89,17 +89,17 @@
             </div>
 
             <div class="access-card forgot-card justify-content-center align-items-center">
-                <h1 class="mb-4 light-color access-card-title">Esqueci minha senha</h1>
+                <h1 class="mb-4 access-color access-card-title">Esqueci minha senha</h1>
                 <div class="row w-100 justify-content-center">
                     <div class="col-12 col-sm-11">
                         <form id="setupForgotPass" method="post">
                             <div class="form-group">
-                                <input required="" class="form-control" type="email" name="email" id="forgot-email">
-                                <label for="forgot-email" class="label-float">Email</label>
+                                <input required="" class="form-control input-access input-access-forgot " placeholder="Email" type="email" name="email" id="forgot-email">
+                                <i class="material-icons access-icon">email</i>
                             </div>
-                            <div class="form-group">
-                                <input class="btn btn-3d-primary" value="Enviar" type="submit">
-                                <button type="button" class="show-login-card btn btn-3d-secondary ml-3">Voltar</button>
+                            <div class="form-group access-bt-forgot">
+                                <input class="btn btn-forgot btn-forgot-primary" value="Enviar" type="submit">
+                                <button type="button" class="show-login-card btn btn-forgot btn-forgot-secondary ml-3">Voltar</button>
                             </div>
                         </form>
                     </div>
@@ -112,13 +112,13 @@
 
     <footer class="container-fluid gradient text-white p-3 text-center">Copyright © 2020 SCTI</footer>
 
-    <script src="public/scripts/utils.js"></script>
-    <script src="public/scripts/index.js"></script>
-    <script src="public/scripts/userRequests.js"></script>
-    <script src="public/scripts/slick.js"></script>
-    <script src="public/scripts/eventCard.js"></script>
-    <script src="public/scripts/carousel.js"></script>
-    <script src="public/scripts/draw.js"></script>
+    <script src="../public/scripts/utils.js"></script>
+    <script src="../public/scripts/index.js"></script>
+    <script src="../public/scripts/userRequests.js"></script>
+    <script src="../public/scripts/slick.js"></script>
+    <script src="../public/scripts/eventCard.js"></script>
+    <script src="../public/scripts/carousel.js"></script>
+    <script src="../public/scripts/draw.js"></script>
     <!-- Loader -->
     <div id="loader">
         <div class="loader-content">

@@ -85,7 +85,7 @@ $(document).ready(function () {
         $('form#verifyPayment').submit();
     });
 
-    if (page == 'access') {
+    if (page == '') {
         let loginCard = $('.login-card');
         let registerCard = $('.register-card');
         let forgotCard = $('.forgot-card');
