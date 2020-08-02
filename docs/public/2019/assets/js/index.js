@@ -10,97 +10,81 @@ $(document).ready(function () {
     btnDown = $('.scroll-down');
 
     //verify payment status
-    if (page == 'account') {
+    if(page == 'account'){
         updatePaymentStatus();
     }
-
+  
     //labels
-    $('.form-control').keyup(function (e) {
+    $('.form-control').keyup(function(e){
         let elem = $(this);
         let label = elem.siblings('.label-float');
-        if (elem.val() !== '') label.addClass('translated-label');
-        else label.removeClass('translated-label');
+        if(elem.val() !== '') label.addClass('translated-label');
+        else label.removeClass ('translated-label');
     });
-
+    
     //navbarcolor
     navColorAndBtnUp();
 
     //phone input
+    
     let telInput = $('input[type=tel]');
-    if (telInput.length) {
+    if(telInput.length){
         let tel = onlyNumber(telInput.val());
         let maskedTell = getMaskedTell(tel);
-
+            
         telInput.val(maskedTell);
     }
     telInput.on('keyup', () => {
         let tel = onlyNumber(telInput.val());
         let maskedTell = getMaskedTell(tel);
-
+        
         telInput.val(maskedTell);
     });
 
     //click listeners
-    btnUp.click(function (e) {
+    btnUp.click(function(e){
         scrollToDiv(0);
     });
 
     //close alert
-    $('.alert .close').click(function (e) {
+    $('.alert .close').click(function(e){
         e.preventDefault();
         hideAlert();
     });
 
-    //appear tooltip
-    $(document).ready(function () {
-        $('[data-toggle="tooltip"]').tooltip();
-    });
 
-    //closes modal after escape is pressed 
-    $(document).on('keydown', function(event) {
-        if ($('.modal-wrapper').hasClass('d-flex') && event.key == "Escape") {
-            toggleModal();
-        }
-    });
-
-    $('.navbar-toggler').click(function (e) {
-        if ($(this).hasClass('collapsed')) {
+    $('.navbar-toggler').click(function(e){
+        if($(this).hasClass('collapsed'))
             navbar.css('background-color', 'rgba(0, 0, 0, 0.6)');
-            $('.dropdown-menu').addClass('dropdown-menu-collapsed');
-            $('.dropdown-item').addClass('dropdown-item-collapsed');
-        }
-        else {
+        else
             navbar.css('background-color', 'transparent');
-            $('.dropdown-menu').removeClass('dropdown-menu-collapsed');
-            $('.dropdown-item').removeClass('dropdown-item-collapsed');
-        }
     });
 
-    if (btnDown.length) {
-        btnDown.click(function () {
+    if(btnDown.length){
+        btnDown.click(function(){
             scrollToNextSection();
         });
     }
-    $('#verifyPayment-btn').click(function (e) {
+    $('#verifyPayment-btn').click(function(e){
         $('form#verifyPayment').submit();
     });
 
-    if (page == 'access') {
+    if(page == 'access'){
         let loginCard = $('.login-card');
         let registerCard = $('.register-card');
         let forgotCard = $('.forgot-card');
 
         //access cards listeners
-        $('#show-register-card').click(function () {
+        $('#show-register-card').click(function(){
             loginCard.hide();
             registerCard.css('display', 'flex');
         });
-        $('button.show-login-card').click(function () {
+        $('button.show-login-card').click(function(){
             registerCard.hide();
             forgotCard.hide();
             loginCard.css('display', 'flex');
         });
-        $('#show-forgot-card').click(function (e) {
+        $('#show-forgot-card').click(function(e){
             e.preventDefault();
             loginCard.hide();
             forgotCard.css('display', 'flex');
@@ -108,34 +92,34 @@ $(document).ready(function () {
     }
 
     //onScroll listeners
-    if (page !== 'access') {
-        jWindow.scroll(function (e) {
+    if(page !== 'access'){
+        jWindow.scroll(function(e){
             let actPos = jWindow.scrollTop();
 
             highlightNavItem();
 
-            if (banner.length)
+            if(banner.length)
                 navColorAndBtnUp();
-
-            if (btnDown.length) {
+            
+            if(btnDown.length){
                 let tolerance = 50;
-                if (actPos >= $('section').last().offset().top - tolerance) {
-                    if (btnDown.css('display') != 'none')
-                        btnDown.hide();
-                } else {
-                    if (btnDown.css('display') == 'none')
+                if(actPos >= $('section').last().offset().top-tolerance){
+                    if(btnDown.css('display') != 'none')
+                        btnDown.hide();    
+                }else{
+                    if(btnDown.css('display') == 'none')
                         btnDown.show();
-                }
+                }               
             }
-
-            if ($('section').eq(1).length) {
-                if (actPos > $('section').eq(1).offset().top / 2) {
-                    if (btnUp.css('display') === 'none') {
+            
+            if($('section').eq(1).length){
+                if(actPos > $('section').eq(1).offset().top/2){
+                    if(btnUp.css('display') === 'none'){
                         btnUp.css('display', 'flex');
-                        btnUp.animate({ 'opacity': 1 }, 100);
+                        btnUp.animate({'opacity': 1}, 100);
                     }
-                } else {
-                    if (btnUp.css('display') !== 'none') {
+                }else{
+                    if(btnUp.css('display') !== 'none'){
                         btnUp.css('display', 'none');
                         btnUp.css('opacity', 0);
                     }
@@ -145,7 +129,7 @@ $(document).ready(function () {
     }
 
     //contact request
-    $('form#contact').submit(function (e) {
+    $('form#contact').submit(function(e){
         e.preventDefault();
 
         let data = $(this).serialize();
@@ -158,15 +142,15 @@ $(document).ready(function () {
             success: function (response) {
                 hideLoader();
 
-                if (response['success']) {
+                if(response['success']){
                     showAlert('alert-success', 'Mensagem enviada com sucesso!');
 
-                } else {
+                }else{
                     console.log(response);
                     showAlert('alert-danger', 'Falha ao enviar mensagem. Por favor, entre em contato com a equipe do evento através do email: sctiuenf@gmail.com.');
                 }
             },
-            error: function (e) {
+            error: function(e){
                 hideLoader();
                 console.log(e);
             }
@@ -174,18 +158,15 @@ $(document).ready(function () {
     });
 });
 
-
-
-
-function navColorAndBtnUp() {
-
+function navColorAndBtnUp(){
+   
     let scrollPos = $(window).scrollTop();
     let changePoint = banner.innerHeight() - navbar.innerHeight();
 
-    if (!banner.length || scrollPos > changePoint) {
+    if(!banner.length || scrollPos > changePoint){
 
         //remover isso depois, adicionar ao css da página account e separar os css's e js's por página
-        if (page == 'account') {
+        if(page == 'account'){
             navbar.removeClass('gradient');
             navbar.css('background-color', 'rgba(0, 0, 0, 0.4)');
             $('footer').removeClass('gradient');
@@ -195,23 +176,23 @@ function navColorAndBtnUp() {
 
             btnUp.removeClass('gradient');
             btnUp.css('background-color', 'rgba(0, 0, 0, 0.4)');
-        } else
+        }else
             navbar.addClass('gradient');
-
+        
     }
-    else {
+    else{
         navbar.removeClass('gradient');
     }
 }
 
-function showLoader(waitBeforeShow, target = 'body') {
-
-    if (waitBeforeShow) {
-        var timeOut = setTimeout(function () {
+function showLoader(waitBeforeShow, target = 'body'){
+   
+    if(waitBeforeShow){
+        var timeOut = setTimeout(function(){
             $(target).css('position', 'relative');
 
             let loader = $('#loader');
-            let pos = target === 'body' ? 'fixed' : 'absolute';
+            let pos = target === 'body' ? 'fixed':'absolute';
 
             loader.detach().appendTo(target);
 
@@ -222,11 +203,11 @@ function showLoader(waitBeforeShow, target = 'body') {
 
         return timeOut;
 
-    } else {
+    }else{
         $(target).css('position', 'relative');
 
         let loader = $('#loader');
-        let pos = target === 'body' ? 'fixed' : 'absolute';
+        let pos = target === 'body' ? 'fixed':'absolute';
 
         loader.detach().appendTo(target);
 
@@ -236,33 +217,27 @@ function showLoader(waitBeforeShow, target = 'body') {
     }
 }
 
-
-function toggleModal() {
-    $('.modal-wrapper').toggleClass('d-flex');
-}
-
-
 //se um timeout para executar o loader tiver sido chamado, o mesmo é limpo se a execução houver terminado
-function hideLoader(timeOut = null) {
-
-    if (timeOut)
+function hideLoader(timeOut = null){
+    
+    if(timeOut)
         clearTimeout(timeOut);
-
+    
     $('#loader').hide();
 }
 
 //no parameter to top
-function scrollToDiv(id) {
-
+function scrollToDiv(id){
+    
     let scrollTo = 0;
-    if (id !== 0)
+    if(id !== 0)
         scrollTo = $(id).offset().top;
-
+    
     //$(window).scrollTop(scrollTo);
-    $('html, body').animate({ scrollTop: scrollTo }, 500, 'swing');
+    $('html, body').animate({scrollTop: scrollTo}, 500, 'swing');
 }
 
-function scrollToNextSection() {
+function scrollToNextSection(){
     let actPos = $(window).scrollTop();
     let sections = $('section');
 
@@ -271,24 +246,87 @@ function scrollToNextSection() {
         let sec = $(section);
 
         //i!==0 para garantir que n seja possível scrollar para a primeira seção
-        if (i !== 0 && actPos < sec.offset().top) {
+        if(i !== 0 && actPos < sec.offset().top){
             divToScroll = sec;
             return false;
         }
-
+        
     });
 
-    scrollToDiv('#' + divToScroll.attr('id'));
+    scrollToDiv('#'+divToScroll.attr('id'));
 }
 
-function highlightNavItem() {
+function updatePaymentStatus(){
+    showLoader(0, '.status');
+
+    $.ajax({
+        type: "get",
+        url: "updatePayment",
+        dataType: "json",
+        success: function (response) {
+            hideLoader();
+            if(response['success']){
+                
+                let status = response['message'];
+                let statusLabel = $('.status-label > div').find('div'),
+                    statusText = $('.status-text'),
+                    listGroups = $('.list-group-container'),
+                    widget = $('.sympla-widget');
+
+                let cls, msg;
+
+                if(status == 'A'){
+                    widget.hide();
+                    listGroups.show();
+                    cls = 'status-ball-green';
+                    msg = 'Inscrição realizada';
+                }else{
+                    listGroups.hide();
+                    widget.show();
+
+                    switch(status){
+                        case 'P':
+                            cls = 'status-ball-yellow';
+                            msg = 'Inscrição realizada';
+                            break;
+                        case 'NA':
+                            cls = 'status-ball-orange';
+                            msg = 'Pagamento não aprovado';
+                            break;
+                        case 'NP':
+                            cls = 'status-ball-orange';
+                            msg = 'Pagamento não concluido';
+                            break;
+                        case 'R':
+                            cls = 'status-ball-orange';
+                            msg = 'Reembolso solicitado';
+                            break;
+                        case 'C':
+                            cls = 'status-ball-red';
+                            msg = 'Pagamento cancelado';
+                            break;
+                        default:
+                            break;
+                    }
+                  
+                }
+
+                statusLabel.attr('class', cls);
+                statusText.html(msg);
+            }else{
+                //não fazer nada
+                console.log(response['message']);
+            }
+        },
+        error: function(e){
+            console.log(e);
+        }
+    });
+}
+
+function highlightNavItem(){
     let secId = currentSection().attr('id');
 
     $('.nav-item').removeClass('active');
-    $('#link-to-' + secId).parent().addClass('active');
-}
-
-function closeValidationErrorBox() {
-    $('.error-box').removeClass('d-flex');
-    $('.error-box').addClass('d-none');    
+    $('#link-to-'+secId).parent().addClass('active');
 }
