@@ -1,388 +1,76 @@
-/*branco*/
-/*cinza*/
-/*azul claro*/
-/*azul escuro*/
-/*verde*/
-/*verde escuro*/
-/*.account .card{
-    height: 100%;
-}
-.account .sec-title{
-    height: 10%;
-}
-#courses-slider{
-    height: 90%;
-}
-.slick-list{
-    height: 100%;
-}
-.slick-track{
-    height: 100%;
-}*/
-#championship {
-  width: 1.3em;
-  height: 1.3em; }
-
-.account {
-  padding-right: 0;
-  padding-left: 0;
-  padding-top: 3em;
-  background-color: #15955b; }
-
-.account section {
-  height: 100vh; }
-
-#user-info {
-  background-color: #15955b; }
-
-#courses {
-  background-color: #157d73;
-  position: relative; }
-
-#shirts {
-  background-color: #196988;
-  position: relative; }
-
-#user-info > .row {
-  height: 45em;
-  max-height: 100vh; }
-
-.account .sec-btns {
-  margin-left: 1.2em;
-  margin-top: 1.2em; }
-
-#courses-slider {
-  height: 85%; }
-
-.sec-btns {
-  height: 15%; }
-
-.account .card {
-  height: 100%; }
-
-.sympla-widget {
-  width: 90%; }
-
-.slick-list {
-  height: 100%; }
-
-.slick-track {
-  height: 100%; }
-
-button.scroll-down {
-  position: fixed;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  border: none;
-  background-color: transparent;
-  font-size: 1.5em;
-  color: white;
-  animation: bounce .7s infinite alternate;
-  z-index: 2; }
-
-button.scroll-down i {
-  margin: 0; }
-
-#btn-help-sympla {
-  padding: 0; }
-
-#btn-help-sympla i {
-  margin: 0;
-  width: 90%; }
-
-.account .card p, .account .card h5 {
-  color: #222;
-  text-align: left; }
-
-.account .card-footer {
-  height: 20%;
-  font-size: .9em; }
-
-.account .card-footer button {
-  margin: 0;
-  padding: 0 .5em; }
-
-.account .card-footer > div {
-  height: fit-content !important; }
-
-.account .card-img-container {
-  width: 100%;
-  height: 80%;
-  position: relative;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain; }
-
-/*.account .card-img-container img{
-    width: 100%;
+  body {
     height: auto;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-}*/
-.account #shirt-slider {
-  height: 85%; }
+  }
 
-.account #shirt-slider .card-body {
-  width: 100%;
-  height: 10%; }
+.sec-heading {
+  margin-left: 12px;
+}
 
-.account #shirt-slider .card-footer {
-  width: 100%;
-  height: 10%; }
+.sec-subtitle {
+  margin-left: 14px;
+}
 
-#shirt-slider .card-body {
-  padding: 0 1.25rem; }
+.sec {
+  padding-top: 20px;
+  padding-bottom: 5%;
+}
 
-.account .slick-slider {
-  height: 100%; }
+#feed {
+  background-color: rgba(24, 240, 52, 0.1);
+}
 
-.h-60 {
-  height: 60% !important; }
+#next-events {
+  background-color: rgba(24, 37, 255, 0.1);
+}
 
-.modal-title {
-  color: #222 !important; }
+#account {
+  background-color: rgba(197, 197, 12, 0.2);
+}
 
-.card-overlay {
-  display: none;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  cursor: pointer;
-  z-index: 2;
-  background-color: rgba(0, 0, 0, 0);
-  margin: 0;
-  padding: 0; }
-
-.card-checkbox {
-  position: absolute;
-  right: 2%;
-  top: 2%;
-  width: 1em;
-  height: 1em;
-  z-index: 2; }
-
-.card .alert {
-  display: none;
-  z-index: 3;
+.user-info-container {
+  margin-left: 30px;
   width: fit-content;
   height: fit-content;
-  padding: 0 .5em;
-  position: absolute;
-  top: 0;
-  right: 10%; }
+  border-color: aquamarine;
+  border-radius: 10px;
+}
 
-.account .help {
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center; }
+.user-field {
+  font-weight: 900;
+}
 
-.account .help i {
-  margin: 0; }
+/*!
+ * Start Bootstrap - Simple Sidebar (https://startbootstrap.com/templates/simple-sidebar)
+ * Copyright 2013-2020 Start Bootstrap
+ * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-simple-sidebar/blob/master/LICENSE)
+ */
 
-.account .help button {
-  color: white;
-  height: fit-content;
-  width: fit-content;
-  background-color: transparent;
-  border: none; }
+#wrapper {
+  margin-top: 53px;
+  overflow-x: hidden;
+}
 
-.modal-body p {
-  color: #222 !important; }
+#sidebar-wrapper {
+margin-left: -15rem;
+-webkit-transition: margin .25s ease-out;
+-moz-transition: margin .25s ease-out;
+-o-transition: margin .25s ease-out;
+transition: margin .25s ease-out;
+}
 
-.status {
-  background-color: #FEFEFE;
-  max-width: unset;
-  position: relative;
-  justify-content: unset;
-  height: fit-content !important; }
+#sidebar-wrapper .sidebar-heading {
+padding: 0.875rem 1.25rem;
+font-size: 1.2rem;
+}
 
-.status-label {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  padding-top: 1em;
-  padding-left: 1em;
-  padding-right: 1em;
-  height: 10%;
-  min-height: fit-content; }
+#sidebar-wrapper .list-group {
+width: 15rem;
+}
 
-.status-label button, .status-col button {
-  background-color: transparent;
-  border: none;
-  color: #A9A9A9;
-  width: fit-content;
-  display: flex;
-  align-items: center; }
+#page-content-wrapper {
+  min-width: 100vw;
+}
 
-.status-label i {
-  margin: 0;
-  font-size: 2em; }
-
-.status-label button:hover, .status-col button:hover {
-  color: #155799; }
-
-.status-col {
-  min-height: 50vh;
-  height: fit-content; }
-
-.status-ball-green {
-  width: 20px;
-  height: 20px;
-  background-color: #45f345;
-  border-radius: 50%;
-  box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #496d02 0 -1px 9px, #45f345 0 2px 12px; }
-
-.status-ball-yellow {
-  width: 20px;
-  height: 20px;
-  background-color: #f1ef4d;
-  border-radius: 50%;
-  box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #a8a605 0 -1px 9px, #f3f045 0 2px 12px; }
-
-.status-ball-red {
-  width: 20px;
-  height: 20px;
-  background-color: #e00000;
-  border-radius: 50%;
-  box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #ad0202 0 -1px 9px, red 0 2px 12px; }
-
-.status-ball-orange {
-  width: 20px;
-  height: 20px;
-  background-color: #ff8800;
-  border-radius: 50%;
-  box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #cc6d00 0 -1px 9px, #ff8800 0 2px 12px; }
-
-.status-text {
-  margin-left: 10px; }
-
-.list-group-container {
-  padding-top: 1em;
-  padding-bottom: 1.5em;
-  width: 90%;
-  height: 90%;
-  min-height: fit-content; }
-
-.list-group {
-  width: 100%;
-  margin-top: 5%; }
-
-.hide {
-  display: none; }
-
-.btn-refresh {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 30px;
-  height: 30px;
-  font-size: 70%;
-  padding: 0; }
-
-.btn-refresh i {
-  margin: 0; }
-
-.info {
-  background-color: #FEFEFE; }
-
-.info .alert {
-  position: relative;
-  top: unset;
-  right: unset;
-  width: 100%;
-  padding: .75rem 1.25rem;
-  padding-right: 4rem; }
-
-.btn-ok {
-  display: none; }
-
-@media (min-width: 1200px) {
-  .right-side {
-    align-items: flex-start !important; } }
-@media (max-width: 1200px) {
-  .account .sec-title {
-    font-size: 2.3em; }
-
-  .account .sec-text {
-    font-size: .95em; }
-
-  .right-side > div {
-    height: fit-content !important; } }
-@media (max-width: 992px) {
-  .account section {
-    min-height: 100vh;
-    height: fit-content; }
-
-  #courses .card, #shirts .card {
-    max-height: 100%;
-    height: 60vh; }
-
-  .account #shirt-slider .card-body {
-    height: 10%;
-    min-height: fit-content; }
-
-  .card-text {
-    min-height: 20vh; }
-
-  .account .card-img-container {
-    min-height: 40vh; }
-
-  #user-info {
-    height: 200vh; }
-
-  #user-info > .row {
-    max-height: unset; }
-
-  .status-container {
-    height: fit-content !important; }
-
-  .right-side {
-    padding: 0 !important; }
-
-  .right-side .card {
-    padding: 1em !important; }
-
-  .left-side, .right-side {
-    height: 50% !important; }
-
-  .status-col {
-    min-height: 50vh;
-    height: auto; } }
-@media (max-width: 576px) {
-  #verifyPayment-btn {
-    margin-top: 1rem; } }
-@media (max-width: 400px) {
-  .courses-slider-container, .shirt-slider-container {
-    padding-left: 0 !important;
-    padding-right: 0 !important; }
-
-  .account .sec-title {
-    font-size: 1.5em; }
-
-  .account .sec-text {
-    font-size: .90em; }
-
-  .list-group-item {
-    padding: .3rem .6rem; }
-
-  .changeInfo-btn {
-    margin-right: 3rem !important; }
-
-  #showModalChangePass {
-    margin-top: 1rem; } }
-@keyframes bounce {
-  from {
-    transform: translate(-50%, 0px); }
-  to {
-    transform: translate(-50%, -20px); } }
-
-/*# sourceMappingURL=account.css.map */
+#wrapper.toggled #sidebar-wrapper {
+margin-left: 0;
+}
