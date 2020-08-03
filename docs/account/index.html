@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>SCTI 2020 - Início</title>
+    <meta name="title" content="SCTI 2020">
+    <meta name="keywords" content="scti, computação, tecnologia, uenf">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="language" content="Portuguese">
+    <meta name="author" content="Pedro Leal, Diana de Sales, Ian Louzada, Guilherme Tavares, Luis Fernando Peixoto">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description"
+        content="Website da Semana Acadêmica de Ciência da Computação e Tecnologia da Informação da Universidade Estadual Darcy Ribeiro - UENF. Saiba mais sobre um dos maiores e melhores eventos de tecnologia da região.">
+
+    <link rel="icon" href="./public/assets/favicon.ico">
+
+    <link rel="stylesheet" type="text/css" href="../public/styles/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../public/styles/style.css">
+    <link rel="stylesheet" type="text/css" href="../public/styles/account.css">
+    <link href="../public/styles/css(1).css" rel="stylesheet">
+
+
+    <script src="../public/scripts/jquery-3.4.1.min.js"></script>
+    <script src="../public/scripts/popper.js"></script>
+    <script src="../public/scripts/bootstrap.min.js"></script>
+    <script src="../public/scripts/fontawesome.js"></script>
+    <link rel="stylesheet" href="../public/styles/free.min.css" media="all">
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+    <div class="d-flex" id="wrapper">
+
+        <header>
+            <div class="border-right" id="sidebar-wrapper">
+                <div class="list-group list-group-flush">
+                    <a href="#" class="list-group-item list-group-item-action"><i
+                            class="fa fa-home fa-1x"></i>Início</a>
+                    <a href="#" class="list-group-item list-group-item-action"><i
+                            class="fa fa-laptop-code fa-1x"></i>Eventos</a>
+                    <a href="#" class="list-group-item list-group-item-action"><i
+                            class="fa fa-flag fa-1x"></i>Desafios</a>
+                    <a href="#" class="list-group-item list-group-item-action"><i
+                            class="fa fa-gift fa-1x"></i>Prêmios</a>
+                    <a href="#" class="list-group-item list-group-item-action"><i
+                            class="fa fa-lock fa-1x"></i>Administrativo <i class="fa fa-caret-down fa-1x ml-1"></i></a>
+                    <!-- TODO: Colocar esses items filhos em um dropdown -->
+                    <ul class="nav-pills nav-stacked mt-1" style="list-style-type:none;">
+                        <a href="#" class="list-group-item list-group-item-action"><i
+                                class="fa fa-user-cog fa-1x"></i>Usuários</a>
+                        <a href="#" class="list-group-item list-group-item-action"><i
+                                class="fa fa-calendar-alt fa-1x"></i>Eventos</a>
+                        <a href="#" class="list-group-item list-group-item-action"><i
+                                class="fa fa-dice fa-1x"></i>Sorteador!</a>
+                    </ul>
+                </div>
+            </div>
+
+            <nav class="navbar navbar-dark fixed-top">
+                <button style="background: transparent; border: none" class="btn-base" id="menu-toggle"><span
+                        class="fa fa-th-large mr-2" aria-hidden="true"></span>MENU</button>
+                <a class="navbar-brand mx-auto" href="https://www.scti.uenf.br/">S C T I</a>
+                <button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
+                    data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div id="navbarNavDropdown" class="navbar-collapse collapse">
+                    <ul class="navbar-nav mr-lg-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" tabindex="0"><i class="fa fa-comment fa-1x"></i>Feed</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" tabindex="0"><i class="fa fa-caret-square-right fa-1x"></i>Próximos
+                                Eventos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" tabindex="0"><i class="fa fa-user-alt fa-1x"></i>Minha Conta</a>
+                        </li>
+                        <li class="nav-item">
+                            <a id="logout" class="nav-link" tabindex="0"><i
+                                    class="fa fa-sign-out-alt fa-1x"></i>Sair</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <main id="page-content-wrapper">
+            <section id="feed" class="sec container-fluid">
+                <h2 class="sec-heading">Feed</h2>
+                <p class="sec-subtitle">Fique por dentro das novidades da SCTI!</p>
+
+                <div class="d-flex align-items-center mt-3">
+                    <p>(Feed aqui)</p>
+                </div>
+            </section>
+
+            <section id="next-events" class="sec container-fluid">
+                <h2 class="sec-heading">Próximos Eventos</h2>
+                <p class="sec-subtitle">Veja quais são os próximos minicursos e palestras que você se inscreveu.</p>
+                    <h5 class="text-center"> Você ainda não está inscrito em nenhum evento. <br>
+                    <a style="font-size: 14px;" class="text-monospace" href="#">Clique aqui para se inscrever</a> 
+                </h5>
+                
+                <div>
+                    (Carousel de Eventos aqui)
+                </div>
+
+            </section>
+
+            <section id="account" class="sec container-fluid">
+                <h2 class="sec-heading">Minha Conta</h2>
+                <p class="sec-subtitle">Abaixo contém as informações e detalhes da sua conta.</p>
+
+                <div class="d-flex align-items-center mt-3">
+                    <div class="row user-info-container">
+                        <div class="col-12 col-lg-6 mt-1">
+                            <h5>
+                                Nome Completo:
+                            </h5>
+                            <p class="user-field">Guilherme Oliveira Mussa Tavares</p>
+                        </div>
+                        <div class="col-12 col-lg-6 mt-1">
+                            <h5>
+                                Email:
+                            </h5>
+                            <p class="user-field">guilive@hotmail.com</p>
+                        </div>
+                        <div class="col-12 col-lg-6 mt-1">
+                            <h5>
+                                Telefone:
+                            </h5>
+                            <p class="user-field">(22) 9970353303</p>
+                        </div>
+                        <div class="col-12 col-lg-6 mt-1">
+                            <h5>
+                                Senha:
+                            </h5>
+                            <p class="user-field">*************</p>
+                        </div>
+                        <div class="col-12 col-md-4 col-lg-2">
+                            <button class="btn-primary btn-base mt-3">
+                                <i class="fa fa-user-edit fa-1x"></i>Editar informações
+                            </button>
+                        </div>
+                        <div class="col-12 col-md-4 col-lg-2">
+                            <button class="btn-primary btn-base mt-3">
+                                <i class="fa fa-unlock-alt fa-1x"></i>Alterar Senha
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <footer class="container-fluid gradient text-white p-2 text-center">Copyright &copy; 2020 SCTI</footer>
+
+
+
+    <script src="../public/scripts/utils.js"></script>
+    <script src="../public/scripts/index.js"></script>
+    <script src="../public/scripts/userRequests.js"></script>
+    <script src="../public/scripts/slick.min.js"></script>
+    <script src="../public/scripts/draw.js"></script>
+
+    <script>
+        $("#menu-toggle").click(function (e) {
+            e.preventDefault();
+            $("#wrapper").toggleClass("toggled");
+        });
+    </script>
+
+</body>
+
+
+</html>
