@@ -165,7 +165,7 @@ main {
 
 .gradient-banner {
   background: #155799;
-  background: linear-gradient(225deg,rgba(70, 3, 54, 0.8) 0%,rgba(1, 54, 108, 0.8) 100%), url("../assets/Fundo\ 3.png");
+  background: linear-gradient(225deg,rgba(70, 3, 54, 0.7) 0%,rgba(1, 54, 108, 0.7) 100%), url("../assets/FundoIcon2.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover; }

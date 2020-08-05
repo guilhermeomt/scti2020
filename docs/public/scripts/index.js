@@ -237,8 +237,8 @@ function showLoader(waitBeforeShow, target = 'body') {
 }
 
 
-function toggleModal() {
-    $('.modal-wrapper').toggleClass('d-flex');
+function toggleModal(index) {
+    $(`.modal-wrapper.${index}`).toggleClass('d-flex');
 }
 
 

@@ -15,13 +15,16 @@
     <meta name="Description"
         content="Website da Semana Acadêmica de Ciência da Computação e Tecnologia da Informação da Universidade Estadual Darcy Ribeiro - UENF. Saiba mais sobre um dos maiores e melhores eventos de tecnologia da região.">
 
-    <link rel="icon" href="./public/assets/favicon.ico">
+    <link rel="icon" href="../public/assets/favicon.ico">
 
     <link rel="stylesheet" type="text/css" href="../public/styles/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="../public/styles/style.css">
     <link rel="stylesheet" type="text/css" href="../public/styles/account.css">
+    <link rel="stylesheet" type="text/css" href="../public/styles/slick.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- TODO: Colocar todas as fontes em um unico link do google fonts -->
     <link href="../public/styles/css(1).css" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300&display=swap" rel="stylesheet">
 
     <script src="../public/scripts/jquery-3.4.1.min.js"></script>
     <script src="../public/scripts/popper.js"></script>
@@ -32,7 +35,6 @@
 
 <body>
 
-    <!-- Sidebar -->
     <div class="d-flex" id="wrapper">
 
         <header>
@@ -46,24 +48,29 @@
                             class="fa fa-flag fa-1x"></i>Desafios</a>
                     <a href="#" class="list-group-item list-group-item-action"><i
                             class="fa fa-gift fa-1x"></i>Prêmios</a>
-                    <a href="#" class="list-group-item list-group-item-action"><i
-                            class="fa fa-lock fa-1x"></i>Administrativo <i class="fa fa-caret-down fa-1x ml-1"></i></a>
-                    <!-- TODO: Colocar esses items filhos em um dropdown -->
-                    <ul class="nav-pills nav-stacked mt-1" style="list-style-type:none;">
-                        <a href="#" class="list-group-item list-group-item-action"><i
-                                class="fa fa-user-cog fa-1x"></i>Usuários</a>
-                        <a href="#" class="list-group-item list-group-item-action"><i
-                                class="fa fa-calendar-alt fa-1x"></i>Eventos</a>
-                        <a href="#" class="list-group-item list-group-item-action"><i
-                                class="fa fa-dice fa-1x"></i>Sorteador!</a>
-                    </ul>
+                    <div class="btn-group dropright">
+                        <button type="button" class="list-group-item list-group-item-action border-top"><i
+                                class="fa fa-lock fa-1x"></i>Administrativo</i></button>
+                        <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="sr-only">Toggle Dropright</span>
+                        </button>
+                        <div class="dropdown-menu w-75 m-0" aria-labelledby="dropdownMenuLink">
+                            <a href="#" class="list-group-item list-group-item-action dropdown-item"><i
+                                    class="fa fa-user-cog fa-1x"></i>Usuários</a>
+                            <a href="#" class="list-group-item list-group-item-action dropdown-item"><i
+                                    class="fa fa-calendar-alt fa-1x"></i>Eventos</a>
+                            <a href="#" class="list-group-item list-group-item-action dropdown-item"><i
+                                    class="fa fa-dice fa-1x"></i>Sorteador!</a>
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <nav class="navbar navbar-dark fixed-top">
-                <button style="background: transparent; border: none" class="btn-base" id="menu-toggle"><span
-                        class="fa fa-th-large mr-2" aria-hidden="true"></span>MENU</button>
-                <a class="navbar-brand mx-auto" href="https://www.scti.uenf.br/">S C T I</a>
+                <button class="btn-base btn-menu" id="menu-toggle" tabindex="1"><span class="fa fa-th-large mr-2"
+                        aria-hidden="true"></span>MENU</button>
+                <a class="navbar-brand text-center" href="https://www.scti.uenf.br/">S C T I</a>
                 <button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
                     data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
                     aria-label="Toggle navigation">
@@ -103,14 +110,165 @@
             <section id="next-events" class="sec container-fluid">
                 <h2 class="sec-heading">Próximos Eventos</h2>
                 <p class="sec-subtitle">Veja quais são os próximos minicursos e palestras que você se inscreveu.</p>
-                    <h5 class="text-center"> Você ainda não está inscrito em nenhum evento. <br>
-                    <a style="font-size: 14px;" class="text-monospace" href="#">Clique aqui para se inscrever</a> 
+                <h5 class="text-center mt-5"> Você ainda não está inscrito em nenhum evento. <br>
+                    <a style="font-size: 14px;" class="text-monospace" href="events/">Clique aqui para se inscrever</a>
                 </h5>
-                
-                <div>
-                    (Carousel de Eventos aqui)
-                </div>
 
+                <hr>ou se tiver inscrito em eventos, renderizar desta forma:</hr>
+
+                <div class="container">
+                    <div class="next-events-slider">
+                        <div class="col-12">
+                            <div class="card event-card">
+                                <img class="card-img-top event-img"
+                                    src="../public/2019/assets/imgs/events/questionMark.jpg" alt="Imagem Evento">
+                                <img class="speaker-img" src="../public/2019/assets/imgs/instrutores/questionMark.jpg">
+                                <div class="card-body">
+                                    <label class="minicurso-label">Minicurso</label>
+                                    <h5 id="minicurso-title" class="card-title">Lorem ipsum dolor sit amet consectetur
+                                        #1
+                                    </h5>
+                                    <h6 id="speaker-name">Fulano de Tal</h6>
+                                    <p id="event-desc" class="card-text scrollbar">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos tempore rerum dicta
+                                    </p>
+                                    <p style="color: green; text-align: center;">Já disponível!</p>
+                                    <button href="#" class="btn-success btn-base"><i
+                                            class="fa fa-video fa-1x"></i>Assistir</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="card event-card">
+                                <img class="card-img-top event-img"
+                                    src="../public/2019/assets/imgs/events/questionMark.jpg" alt="Imagem Evento">
+                                <img class="speaker-img" src="../public/2019/assets/imgs/instrutores/questionMark.jpg">
+                                <div class="card-body">
+                                    <label class="palestra-label">Palestra</label>
+                                    <h5 id="palestra-title" class="card-title">Lorem ipsum dolor sit amet consectetur #2
+                                    </h5>
+                                    <h6 id="speaker-name">Fulano de Tal</h6>
+                                    <p id="event-desc" class="card-text scrollbar">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos tempore rerum dicta
+                                        consequatur minima nesciunt rem deleniti architecto hic culpa neque, veritatis
+                                        qui!
+                                        Cumque, ducimus delectus. Molestiae earum iusto aspernatur! Lorem ipsum dolor
+                                        sit
+                                        amet
+                                        consectetur adipisicing elit. Veritatis facilis voluptatum ratione accusantium
+                                        non,
+                                        possimus asperiores. Expedita nobis, provident beatae dolor consequuntur debitis
+                                        numquam
+                                        iure pariatur, id, doloremque maxime minima? Lorem ipsum dolor sit amet
+                                        consectetur,
+                                        adipisicing elit. Eum rem aliquid culpa harum, doloremque cumque reprehenderit
+                                        provident
+                                        maiores est unde optio reiciendis quis, a asperiores esse, architecto sit alias
+                                        tempore?
+                                    </p>
+                                    <p style="color: red; text-align: center;">Ao vivo há 20 minutos!</p>
+                                    <button href="#" class="btn-danger btn-base"><i
+                                            class="fa fa-video fa-1x"></i>Acompanhar</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="card event-card">
+                                <img class="card-img-top event-img"
+                                    src="../public/2019/assets/imgs/events/questionMark.jpg" alt="Imagem Evento">
+                                <img class="speaker-img" src="../public/2019/assets/imgs/instrutores/questionMark.jpg">
+                                <div class="card-body">
+                                    <label class="palestra-label">Palestra</label>
+                                    <h5 id="palestra-title" class="card-title">Lorem ipsum dolor sit amet consectetur #3
+                                    </h5>
+                                    <h6 id="speaker-name">Fulano de Tal</h6>
+                                    <p id="event-desc" class="card-text scrollbar">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos tempore rerum dicta
+                                        consequatur minima nesciunt rem deleniti architecto hic culpa neque, veritatis
+                                        qui!
+                                        Cumque, ducimus delectus. Molestiae earum iusto aspernatur! Lorem ipsum dolor
+                                        sit
+                                        amet
+                                        consectetur adipisicing elit. Veritatis facilis voluptatum ratione accusantium
+                                        non,
+                                        possimus asperiores. Expedita nobis, provident beatae dolor consequuntur debitis
+                                        numquam
+                                        iure pariatur, id, doloremque maxime minima? Lorem ipsum dolor sit amet
+                                        consectetur,
+                                        adipisicing elit. Eum rem aliquid culpa harum, doloremque cumque reprehenderit
+                                        provident
+                                        maiores est unde optio reiciendis quis, a asperiores esse, architecto sit alias
+                                        tempore?
+                                    </p>
+                                    <p style="color: red; text-align: center;">Está começando agora!</p>
+                                    <button href="#" class="btn-danger btn-base"><i
+                                            class="fa fa-video fa-1x"></i>Acompanhar</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="card event-card">
+                                <img class="card-img-top event-img"
+                                    src="../public/2019/assets/imgs/events/questionMark.jpg" alt="Imagem Evento">
+                                <img class="speaker-img" src="../public/2019/assets/imgs/instrutores/questionMark.jpg">
+                                <div class="card-body">
+                                    <label class="minicurso-label">Minicurso</label>
+                                    <h5 id="minicurso-title" class="card-title">Lorem ipsum dolor sit amet consectetur
+                                        #4
+                                    </h5>
+                                    <h6 id="speaker-name">Fulano de Tal</h6>
+                                    <p id="event-desc" class="card-text scrollbar">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit
+                                        amet consectetur adipisicing elit. Et numquam enim consectetur accusamus eveniet
+                                        id fugit cupiditate, voluptates impedit voluptatum soluta nisi incidunt maiores
+                                        velit modi reprehenderit vitae eos atque!
+                                    </p>
+                                    <p style="font-weight: bolder;">Disponível em: <br>
+                                    </p>
+                                    <p style="font-weight: bolder;" class="text-center"> 10/11/2020 às 8h <br> Duração:
+                                        2h
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="card event-card">
+                                <img class="card-img-top event-img"
+                                    src="../public/2019/assets/imgs/events/questionMark.jpg" alt="Imagem Evento">
+                                <img class="speaker-img" src="../public/2019/assets/imgs/instrutores/questionMark.jpg">
+                                <div class="card-body">
+                                    <label class="palestra-label">Palestra</label>
+                                    <h5 id="palestra-title" class="card-title">Lorem ipsum dolor sit amet consectetur #5
+                                    </h5>
+                                    <h6 id="speaker-name">Fulano de Tal</h6>
+                                    <p id="event-desc" class="card-text scrollbar">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos tempore rerum dicta
+                                        consequatur minima nesciunt rem deleniti architecto hic culpa neque, veritatis
+                                        qui!
+                                        Cumque, ducimus delectus. Molestiae earum iusto aspernatur! Lorem ipsum dolor
+                                        sit
+                                        amet
+                                        consectetur adipisicing elit. Veritatis facilis voluptatum ratione accusantium
+                                        non,
+                                        possimus asperiores. Expedita nobis, provident beatae dolor consequuntur debitis
+                                        numquam
+                                        iure pariatur, id, doloremque maxime minima? Lorem ipsum dolor sit amet
+                                        consectetur,
+                                        adipisicing elit. Eum rem aliquid culpa harum, doloremque cumque reprehenderit
+                                        provident
+                                        maiores est unde optio reiciendis quis, a asperiores esse, architecto sit alias
+                                        tempore?
+                                    </p>
+                                    <p style="font-weight: bolder;">Ao vivo em: <br>
+                                    </p>
+                                    <p style="font-weight: bolder;" class="text-center"> 10/11/2020 às 15h <br> Duração:
+                                        1h
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
 
             <section id="account" class="sec container-fluid">
@@ -135,7 +293,7 @@
                             <h5>
                                 Telefone:
                             </h5>
-                            <p class="user-field">(22) 9970353303</p>
+                            <p class="user-field">(22) 997035330</p>
                         </div>
                         <div class="col-12 col-lg-6 mt-1">
                             <h5>
@@ -143,13 +301,13 @@
                             </h5>
                             <p class="user-field">*************</p>
                         </div>
-                        <div class="col-12 col-md-4 col-lg-2">
-                            <button class="btn-primary btn-base mt-3">
+                        <div class="col-8 col-md-4 col-lg-3">
+                            <button class="btn-primary btn-base mt-3" onclick="toggleModal(0)">
                                 <i class="fa fa-user-edit fa-1x"></i>Editar informações
                             </button>
                         </div>
-                        <div class="col-12 col-md-4 col-lg-2">
-                            <button class="btn-primary btn-base mt-3">
+                        <div class="col-8 col-md-4 col-lg-2">
+                            <button class="btn-primary btn-base mt-3" onclick="toggleModal(1)">
                                 <i class="fa fa-unlock-alt fa-1x"></i>Alterar Senha
                             </button>
                         </div>
@@ -161,20 +319,85 @@
     <footer class="container-fluid gradient text-white p-2 text-center">Copyright &copy; 2020 SCTI</footer>
 
 
-
     <script src="../public/scripts/utils.js"></script>
     <script src="../public/scripts/index.js"></script>
     <script src="../public/scripts/userRequests.js"></script>
-    <script src="../public/scripts/slick.min.js"></script>
-    <script src="../public/scripts/draw.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+        integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
+        crossorigin="anonymous"></script>
+    <script src="../public/scripts/account.js"></script>
 
-    <script>
-        $("#menu-toggle").click(function (e) {
-            e.preventDefault();
-            $("#wrapper").toggleClass("toggled");
-        });
-    </script>
-
+    <div class="modal-wrapper 0">
+        <div class="custom-modal">
+            <a class="btn btn-modal" href="#" onclick="toggleModal(0)">x</a>
+            <div class="col-form">
+                <p>Atualize os campos que você deseja mudar:</p>
+                <div class="row justify-content-center">
+                    <div class="col-12 mt-2">
+                        <form class="w-100" id="contact" method="post">
+                            <div class="row">
+                                <div class="col-12 col-lg-6">
+                                    <div class="form-group">
+                                        <input id="firstName" class="form-control input-register" placeholder="Nome"
+                                            required="" name="firstName" value="Guilherme" type="text">
+                                        <i class="material-icons register-icon">person</i>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-6">
+                                    <div class="form-group">
+                                        <input id="lastName" class="form-control input-register" placeholder="Sobrenome"
+                                            required="" name="lastName" value="Oliveira Mussa Tavares" type="text">
+                                        <i class="material-icons register-icon">person</i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input id="email" class="form-control input-register" placeholder="Email" required=""
+                                    name="email" value="guilive@hotmail.com" type="email">
+                                <i class="material-icons register-icon">email</i>
+                            </div>
+                            <div class="form-group">
+                                <input id="phone" pattern="[\(][0-9]{2}[\)] [0-9]{1} [0-9]{4}[\-][0-9]{4}"
+                                    class="form-control input-register" name="phone" placeholder="Telefone" type="tel"
+                                    value="(22) 9 9703-5330">
+                                <i class="material-icons register-icon">phone</i>
+                            </div>
+                            <div class="row d-flex justify-content-center">
+                                <input class="btn-primary btn-base btn" type="submit" value="Confirmar">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-wrapper 1">
+        <div class="custom-modal">
+            <a class="btn btn-modal" href="#" onclick="toggleModal(1)">x</a>
+            <div class="col-form">
+                <p>Preencha os campos abaixo:</p>
+                <div class="row justify-content-center">
+                    <div class="col-12 mt-2">
+                        <form class="w-100" id="contact" method="post">
+                            <div class="form-group">
+                                <input id="currentPassword" class="form-control input-register"
+                                    placeholder="Senha Atual" required="" name="currentPassword" type="text">
+                                <i class="material-icons register-icon">vpn_key</i>
+                            </div>
+                            <div class="form-group">
+                                <input id="newPassword" class="form-control input-register" placeholder="Nova Senha"
+                                    required="" name="newPassword" type="text">
+                                <i class="material-icons register-icon">vpn_key</i>
+                            </div>
+                            <div class="row d-flex justify-content-center">
+                                <input class="btn-primary btn-base btn" type="submit" value="Confirmar">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 
