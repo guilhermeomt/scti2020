@@ -165,7 +165,7 @@ main {
 
 .gradient-banner {
   background: #155799;
-  background: linear-gradient(225deg,rgba(70, 3, 54, 0.7) 0%,rgba(1, 54, 108, 0.7) 100%), url("../assets/FundoIcon2.png");
+  background: linear-gradient(225deg,rgba(70, 3, 54, 0.6) 0%,rgba(1, 54, 108, 0.6) 100%), url("../assets/Fundo.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover; }
@@ -518,7 +518,7 @@ i {
 
 }
 
-a.btn-modal {
+.btn-modal {
   position: absolute;
   font-size: 1.5rem;
   top: -20px;
@@ -537,7 +537,7 @@ a.btn-modal {
 }
 
 
-a.btn-modal:hover {
+.btn-modal:hover {
   color: white;
   background: #b82323;
 }
@@ -726,7 +726,7 @@ span.fa-angle-down:hover {
       overflow-x: hidden;
     }
 
-    a.btn-modal {
+    .btn-modal {
       background-color: transparent;
       color: black;
       border: none;
@@ -735,7 +735,7 @@ span.fa-angle-down:hover {
       right: -5px;
     }
 
-    a.btn-modal:hover {
+    .btn-modal:hover {
       color: red;
       background: none;
     }
