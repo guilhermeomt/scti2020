@@ -893,6 +893,10 @@ span.fa-angle-down:hover {
   transition: all 0.6s;
 }
 
+.btn-base:focus{
+  box-shadow: none;
+}
+
 .btn-primary{
   background: #01366c;
   width: 100%;
