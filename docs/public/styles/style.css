@@ -175,7 +175,7 @@ main {
 
 .home-main section:first-child {
   padding: 2rem;
-  padding-top: 50px; }
+  padding-top: 4rem; }
 
 #home-main section:first-child section  {
   width: auto;
@@ -306,6 +306,24 @@ main {
 .dropdown-item-collapsed:hover {
   background-color: transparent;
   color: rgba(255, 255, 255, .5);
+}
+
+#programacao .nav-link {
+  color: #01366C;
+  border: none;
+  font-size: 18px;
+}
+
+#programacao .nav-link:hover {
+  color: #011935;
+}
+
+#programacao .nav-link.active {
+  background-color: transparent;
+  border-color: transparent;
+  border-bottom: 2px #330E43 solid;
+  color: #01366C;
+  font-weight: bold;
 }
 
 .btn-up i {

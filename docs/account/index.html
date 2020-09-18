@@ -3,7 +3,7 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>SCTI 2020 - Início</title>
+    <title>SCTI 2020 - Minha Conta</title>
     <meta name="title" content="SCTI 2020">
     <meta name="keywords" content="scti, computação, tecnologia, uenf">
     <meta name="robots" content="index, follow">
@@ -38,46 +38,17 @@
     <div class="d-flex" id="wrapper">
 
         <header>
-            <div class="border-right" id="sidebar-wrapper">
-                <div class="list-group list-group-flush">
-                    <a href="." class="list-group-item list-group-item-action"><i
-                            class="fa fa-home fa-1x"></i>Início</a>
-                    <a href="#" class="list-group-item list-group-item-action"><i
-                            class="fa fa-laptop-code fa-1x"></i>Eventos</a>
-                    <a href="#" class="list-group-item list-group-item-action"><i
-                            class="fa fa-flag fa-1x"></i>Desafios</a>
-                    <a href="#" class="list-group-item list-group-item-action"><i
-                            class="fa fa-gift fa-1x"></i>Prêmios</a>
-                    <div class="btn-group dropright">
-                        <button type="button" class="list-group-item list-group-item-action border-top"><i
-                                class="fa fa-lock fa-1x"></i>Administrativo</i></button>
-                        <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <span class="sr-only">Toggle Dropright</span>
-                        </button>
-                        <div class="dropdown-menu w-75 m-0" aria-labelledby="dropdownMenuLink">
-                            <a href="#" class="list-group-item list-group-item-action dropdown-item"><i
-                                    class="fa fa-user-cog fa-1x"></i>Usuários</a>
-                            <a href="#" class="list-group-item list-group-item-action dropdown-item"><i
-                                    class="fa fa-calendar-alt fa-1x"></i>Eventos</a>
-                            <a href="#" class="list-group-item list-group-item-action dropdown-item"><i
-                                    class="fa fa-dice fa-1x"></i>Sorteador!</a>
-                        </div>
-                    </div>
-                    <a href="#" class="list-group-item list-group-item-action border-bottom"><i
-                        class="fa fa-sign-out-alt fa-1x"></i>Sair</a>
-                </div>
-            </div>
-
             <nav class="navbar navbar-dark fixed-top">
-                <button class="btn-base btn-menu" id="menu-toggle" tabindex="1"><span class="fa fa-th-large mr-2"
-                        aria-hidden="true"></span>MENU</button>
-                <a class="navbar-brand mx-auto" href="https://www.scti.uenf.br/">S C T I</a>
+                <a class="navbar-brand" href="https://www.scti.uenf.br/">S C T I</a>
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-sign-out-alt fa-1x"></i>Sair</a>
+                    </li>
+                </ul>
             </nav>
         </header>
 
         <main id="page-content-wrapper">
-            <section id="feed" class="sec container-fluid">
+            <!--      <section id="feed" class="sec container-fluid">
                 <h2 class="sec-heading">Feed</h2>
                 <p class="sec-subtitle">Fique por dentro das novidades da SCTI!</p>
 
@@ -85,15 +56,9 @@
                     <p>(Feed aqui)</p>
                 </div>
             </section>
-
+ -->
             <section id="next-events" class="sec container-fluid">
-                <h2 class="sec-heading">Próximos Eventos</h2>
-                <p class="sec-subtitle">Veja quais são os próximos minicursos e palestras que você se inscreveu.</p>
-                <h5 class="text-center mt-5"> Você ainda não está inscrito em nenhum evento. <br>
-                    <a style="font-size: 14px;" class="text-monospace" href="events/">Clique aqui para se inscrever</a>
-                </h5>
-
-                <hr>ou se tiver inscrito em eventos, renderizar desta forma:</hr>
+                <h2 class="sec-heading mb-4">/ Palestras</h2>
 
                 <div class="container">
                     <div class="next-events-slider">
@@ -103,7 +68,6 @@
                                     src="../public/2019/assets/imgs/events/questionMark.jpg" alt="Imagem Evento">
                                 <img class="speaker-img" src="../public/2019/assets/imgs/instrutores/questionMark.jpg">
                                 <div class="card-body">
-                                    <label class="minicurso-label">Minicurso</label>
                                     <h5 id="minicurso-title" class="card-title">Lorem ipsum dolor sit amet consectetur
                                         #1
                                     </h5>
@@ -123,7 +87,6 @@
                                     src="../public/2019/assets/imgs/events/questionMark.jpg" alt="Imagem Evento">
                                 <img class="speaker-img" src="../public/2019/assets/imgs/instrutores/questionMark.jpg">
                                 <div class="card-body">
-                                    <label class="palestra-label">Palestra</label>
                                     <h5 id="palestra-title" class="card-title">Lorem ipsum dolor sit amet consectetur #2
                                     </h5>
                                     <h6 id="speaker-name">Fulano de Tal</h6>
@@ -157,7 +120,6 @@
                                     src="../public/2019/assets/imgs/events/questionMark.jpg" alt="Imagem Evento">
                                 <img class="speaker-img" src="../public/2019/assets/imgs/instrutores/questionMark.jpg">
                                 <div class="card-body">
-                                    <label class="palestra-label">Palestra</label>
                                     <h5 id="palestra-title" class="card-title">Lorem ipsum dolor sit amet consectetur #3
                                     </h5>
                                     <h6 id="speaker-name">Fulano de Tal</h6>
@@ -191,7 +153,6 @@
                                     src="../public/2019/assets/imgs/events/questionMark.jpg" alt="Imagem Evento">
                                 <img class="speaker-img" src="../public/2019/assets/imgs/instrutores/questionMark.jpg">
                                 <div class="card-body">
-                                    <label class="minicurso-label">Minicurso</label>
                                     <h5 id="minicurso-title" class="card-title">Lorem ipsum dolor sit amet consectetur
                                         #4
                                     </h5>
@@ -216,7 +177,6 @@
                                     src="../public/2019/assets/imgs/events/questionMark.jpg" alt="Imagem Evento">
                                 <img class="speaker-img" src="../public/2019/assets/imgs/instrutores/questionMark.jpg">
                                 <div class="card-body">
-                                    <label class="palestra-label">Palestra</label>
                                     <h5 id="palestra-title" class="card-title">Lorem ipsum dolor sit amet consectetur #5
                                     </h5>
                                     <h6 id="speaker-name">Fulano de Tal</h6>
@@ -251,7 +211,7 @@
             </section>
 
             <section id="account" class="sec container-fluid">
-                <h2 class="sec-heading">Minha Conta</h2>
+                <h2 class="sec-heading">/ Minha Conta</h2>
                 <p class="sec-subtitle">Abaixo contém as informações e detalhes da sua conta.</p>
 
                 <div class="d-flex align-items-center mt-3">

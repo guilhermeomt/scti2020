@@ -284,7 +284,7 @@ function scrollToNextSection() {
 function highlightNavItem() {
     let secId = currentSection().attr('id');
 
-    $('.nav-item').removeClass('active');
+    $('li.nav-item').removeClass('active');
     $('#link-to-' + secId).parent().addClass('active');
 }
 
