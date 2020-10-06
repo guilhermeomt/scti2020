@@ -153,7 +153,8 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0; }
+  margin: 0; 
+}
 
 #drawCanvas {
   z-index: 0;
@@ -169,6 +170,12 @@ main {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover; }
+
+.horizontal-line {
+  background-color: rgba(255,255,255,0.8); 
+  width: 50px;
+  height: 2px;
+}
 
 .p-6 {
   padding: 6rem !important; }
@@ -478,12 +485,12 @@ i {
   color: rgba(34, 34, 34, 0.7);
   margin: 0; }
 
- .pr-card {
+.pr-card {
     background-color: transparent; 
     border: none; 
     }
 
- .pr-header {
+.pr-header {
   background-color: transparent;
   border-bottom: none;
 }
@@ -516,7 +523,6 @@ i {
   animation: modal .4s;
 }
 
-
 .img-modal{
   text-align: center;
 }
@@ -525,6 +531,84 @@ i {
     width: 40%;
     height: 40%;
     object-fit: cover;
+}
+
+.event-date {
+  display: block; 
+  font-size: 10px; 
+  text-align: center; 
+  margin-bottom: 0px; 
+  color:#696969;  
+}
+
+.event-item {
+	padding: 3em 2em 2em;
+	position: relative;
+	color: rgba(black, .7);
+  border-left: 2px solid rgba(0, 0, 0, .1);
+}
+
+.event-item::before {
+	content: attr(data-hour);
+	position: absolute;
+	left: .7em;
+	font-weight: bold;
+	top: 1em;
+	display: block;
+  font-family: 'Roboto', sans-serif;
+  font-style: italic;
+  font-weight: 700;
+  color: #034188;
+  font-size: 22px;
+
+}
+
+.event-item::after {
+	width: 10px;
+	height: 10px;
+	display: block;
+	top: 1.9em;
+	position: absolute;
+	left: -6px;
+	border-radius: 10px;
+	content: '';
+	border: 2px solid rgba(0, 0, 0, 0.4);
+  background: whitesmoke;
+  
+}
+
+.event-title {
+  font-size: 30px;
+  padding-top: 6px;
+}
+
+.speaker-img {
+  border-radius: 40%; 
+  box-shadow: 0 4px 5px black; 
+  width: 6em; 
+  display: inline-flex;
+}
+
+.speaker-info {
+  margin-left: 20px; 
+  display: inline;
+}
+
+.speaker-name {
+  font-family: 'Courier New', Courier, monospace; 
+  letter-spacing: 0.2em; 
+  color: #320F45;
+}
+
+.event-desc {
+  text-align: justify;
+}
+
+.social {
+  color: #696969;
+}
+.social:hover {
+  opacity: 0.7;
 }
 
 
@@ -554,7 +638,6 @@ i {
   transition: 0.4s ease-in-out;
 }
 
-
 .btn-modal:hover {
   color: white;
   background: #b82323;
@@ -566,12 +649,16 @@ i {
   text-align: center;
 }
 
-span.fa-angle-down {
+span.fa-angle-down, span.fa-angle-up {
   color: #155799;
 }
 
-span.fa-angle-down:hover {
+span.fa-angle-down:hover, span.fa-angle-up:hover {
   color: rgb(21, 87, 153, 0.4);
+}
+
+.invert {
+  transform: rotate(180deg);
 }
 
 /* Loader */
@@ -769,6 +856,24 @@ span.fa-angle-down:hover {
     font-size: 1.5em; }
     
 
+  .event-title {
+    text-align: center;
+    padding-left: 16px;
+  }  
+   .event-info {
+    text-align: center;
+    justify-content: center;
+    margin-left: 0 !important;
+  }
+  
+  .speaker-name {
+    margin-top: 1em;
+  }
+
+  .event-desc {
+    text-align: center !important;
+  }
+  
   .day-slider {
     display: none !important; }
 
@@ -887,6 +992,16 @@ span.fa-angle-down:hover {
   left: 25px;
 }
 
+.show-password {
+  position: absolute;
+  width: auto;
+  opacity: 0.8;
+  transition: 0.4s;
+  margin-right: 0px;
+  top: 14px;
+  right: 25px;
+}
+
 /* button */
 
 .btn-base{
@@ -926,7 +1041,13 @@ span.fa-angle-down:hover {
 
 .btn-subscribe{
   border: 3px solid white;
+  font-size: 16px;
   background: #01376c00;
+}
+
+.btn-discord {
+  font-size: 12px; 
+  padding: 15%;
 }
 
 .btn-subscribe:hover{
