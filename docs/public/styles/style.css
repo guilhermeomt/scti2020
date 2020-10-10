@@ -535,7 +535,7 @@ i {
 
 .event-date {
   display: block; 
-  font-size: 10px; 
+  font-size: 11px; 
   text-align: center; 
   margin-bottom: 0px; 
   color:#696969;  
@@ -584,7 +584,7 @@ i {
 
 .speaker-img {
   border-radius: 40%; 
-  box-shadow: 0 4px 5px black; 
+  box-shadow: 0 4px 5px #666666; 
   width: 6em; 
   display: inline-flex;
 }
@@ -596,12 +596,14 @@ i {
 
 .speaker-name {
   font-family: 'Courier New', Courier, monospace; 
-  letter-spacing: 0.2em; 
+  font-size: 26px;
+  letter-spacing: 0.1em; 
   color: #320F45;
 }
 
 .event-desc {
   text-align: justify;
+  font-size: 18px;
 }
 
 .social {
@@ -609,15 +611,6 @@ i {
 }
 .social:hover {
   opacity: 0.7;
-}
-
-
-@media (max-width: 768px) {
-  
-  .img-modal {
-    display: none;
-  }
-
 }
 
 .btn-modal {
@@ -850,11 +843,18 @@ span.fa-angle-down:hover, span.fa-angle-up:hover {
   }
 
   #navbarNavDropdown ul {
-    margin-right: auto !important; } }
-@media (max-width: 576px) {
+    margin-right: auto !important; } 
+}
+
+
+@media (max-width: 768px) {
   .title {
-    font-size: 1.5em; }
+    font-size: 1.5em;
+  }
     
+  .img-modal {
+    display: none;
+  }
 
   .event-title {
     text-align: center;
@@ -874,11 +874,8 @@ span.fa-angle-down:hover, span.fa-angle-up:hover {
     text-align: center !important;
   }
   
-  .day-slider {
-    display: none !important; }
+}
 
-  #day-select {
-    display: block; } }
 @keyframes animateBack {
   0% {
     transform: rotateZ(0deg); }
@@ -1047,7 +1044,7 @@ span.fa-angle-down:hover, span.fa-angle-up:hover {
 
 .btn-discord {
   font-size: 12px; 
-  padding: 15%;
+  padding: 15px;
 }
 
 .btn-subscribe:hover{
