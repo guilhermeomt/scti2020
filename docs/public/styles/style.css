@@ -213,13 +213,7 @@ main {
 .home-main > section:nth-child(2n+1) {
   background-color: #F6F6F6; }
 
-#programacao > div {
-  padding-right: 0;
-  padding-left: 0; }
 
-#programacao-slider {
-  padding-top: 4rem;
-  padding-bottom: 3rem; }
 
 .home-main section:last-child:after {
   background: none; }
@@ -447,8 +441,8 @@ i {
 	left: -6px;
 	border-radius: 10px;
 	content: '';
-	border: 2px solid rgba(0, 0, 0, 0.4);
-  background: whitesmoke;
+	border: 2px solid rgba(0, 0, 0, 0.3);
+  background: white;
   
 }
 
