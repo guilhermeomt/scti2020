@@ -4,6 +4,13 @@
 /*azul escuro*/
 /*verde*/
 /*verde escuro*/
+
+
+
+
+
+
+
 .light-color {
   color: #FEFEFE; }
 
@@ -901,4 +908,19 @@ span.fa-angle-down:hover, span.fa-angle-up:hover {
 
 .facebook-icon-size{
   font-size: 1.7rem;
+}
+
+.scrtabs-tab-scroll-arrow-left{
+  background-image: url("../assets/left-arrow.svg") ;
+  background-repeat: no-repeat;
+  background-position-y: center;
+  background-position-y: bottom;
+
+}
+
+.scrtabs-tab-scroll-arrow-right {
+  background-image: url("../assets/right-arrow.svg") ;
+  background-repeat: no-repeat;
+  background-position-y: bottom;
+
 }
