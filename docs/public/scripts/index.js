@@ -75,6 +75,21 @@ $(document).ready(function () {
             $('.dropdown-item').removeClass('dropdown-item-collapsed');
         }
     });
+    
+    const prBtns = document.querySelectorAll('.collapsed');
+    prBtns.forEach(btn => {
+        btn.addEventListener('click', e => {
+           const span = btn.firstElementChild;
+
+           if(btn.classList.contains('collapsed')){
+               btn.classList.remove('collapsed')
+               span.classList.add('invert')
+           } else {
+               btn.classList.add('collapsed')
+               span.classList.remove('invert')
+           }
+        });
+    });
 
     if (btnDown.length) {
         btnDown.click(function () {
@@ -284,11 +299,32 @@ function scrollToNextSection() {
 function highlightNavItem() {
     let secId = currentSection().attr('id');
 
-    $('.nav-item').removeClass('active');
+    if(secId === 'sec-apoio'){
+        $('li.nav-item').removeClass('active');
+        $('#link-to-sec-apoio').parent().addClass('active');
+        $('#link-to-sec-contato').parent().addClass('active');
+        return;
+    }
+
+    $('li.nav-item').removeClass('active');
     $('#link-to-' + secId).parent().addClass('active');
 }
 
 function closeValidationErrorBox() {
     $('.error-box').removeClass('d-flex');
     $('.error-box').addClass('d-none');    
+}
+
+function togglePassword() {
+    const input = document.querySelector('input#password');
+    const icon = document.querySelector('i.show-password');
+    const visibility = 'visibility';
+
+    if(input.type === 'password') {
+        input.type = 'text';
+        icon.innerHTML =  `${visibility}_off`;
+    } else {
+        input.type = 'password';
+        icon.innerHTML = visibility;
+    }
 }
