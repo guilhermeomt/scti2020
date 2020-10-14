@@ -26,7 +26,10 @@
     <script src="./public/scripts/popper.js"></script>
     <script src="./public/scripts/bootstrap.min.js"></script>
     <script src="./public/scripts/fontawesome.js"></script>
+    <link rel="stylesheet" href="./public/styles/scrolling-tabs.css">
     <link rel="stylesheet" href="./public/styles/free.min.css" media="all">
+    <script src="./public/scripts/scrolling.js"></script>
+    <script src="./public/scripts/scrolling-tabs.js"></script>
 </head>
 
 <body>
@@ -275,30 +278,44 @@
             <div class="col-12 col-sm-11 col-xl-10">
                 <h2 class="mb-4">/ Programação</h2>
                 <nav>
-                    <div class="nav nav-tabs justify-content-center" id="nav-tab" role="tablist">
-                        <a class="nav-item nav-link active text-center" id="nav-dia1-tab" data-toggle="tab"
-                            href="#nav-dia1" role="tab" aria-controls="nav-dia1" aria-selected="true">
-                            Dia 1
-                            <span class="event-date">03/11/2020
-                            </span>
-                        </a>
-                        <a class="nav-item nav-link text-center" id="nav-dia2-tab" data-toggle="tab" href="#nav-dia2"
-                            role="tab" aria-controls="nav-dia2" aria-selected="false">
-                            Dia 2
-                            <span class="event-date">04/11/2020
-                            </span>
-                        </a>
-                        <a class="nav-item nav-link text-center" id="nav-dia3-tab" data-toggle="tab" href="#nav-dia3"
-                            role="tab" aria-controls="nav-dia3" aria-selected="false">Dia 3
-                            <span class="event-date">05/11/2020
-                            </span>
-                        </a>
-                        <a class="nav-item nav-link text-center" id="nav-dia4-tab" data-toggle="tab" href="#nav-dia4"
-                            role="tab" aria-controls="nav-dia4" aria-selected="false">Dia 4
-                            <span class="event-date">06/11/2020
-                            </span>
-                        </a>
-                    </div>
+                    <ul class="nav nav-tabs justify-content-center" id="nav-tab" role="tablist">
+                        <li role="presentation">
+
+                            <a class="nav-item nav-link active text-center" id="nav-dia1-tab" data-toggle="tab"
+                                href="#nav-dia1"  role="tab" aria-controls="nav-dia1" aria-selected="true">
+                                Dia 1
+                                <span class="event-date">03/11/2020
+                                </span>
+                            </a>
+                        </li>
+                        <li role="presentation">
+
+                            <a class="nav-item nav-link text-center" id="nav-dia2-tab" data-toggle="tab"
+                                href="#nav-dia2" role="tab" aria-controls="nav-dia2" aria-selected="false">
+                                Dia 2
+                                <span class="event-date">04/11/2020
+                                </span>
+                            </a>
+                        </li>
+
+                        <li role="presentation">
+
+
+                            <a class="nav-item nav-link text-center" id="nav-dia3-tab" data-toggle="tab"
+                                href="#nav-dia3" role="tab" aria-controls="nav-dia3" aria-selected="false">Dia 3
+                                <span class="event-date">05/11/2020
+                                </span>
+                            </a>
+                        </li>
+                        <li role="presentation">
+
+                            <a class="nav-item nav-link text-center" id="nav-dia4-tab" data-toggle="tab"
+                                href="#nav-dia4" role="tab" aria-controls="nav-dia4" aria-selected="false">Dia 4
+                                <span class="event-date">06/11/2020
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
                 </nav>
                 <div class="tab-content" id="nav-tabContent">
                     <div class="tab-pane fade show active" id="nav-dia1" role="tabpanel" aria-labelledby="nav-dia1-tab">
