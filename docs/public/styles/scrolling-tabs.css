@@ -44,7 +44,7 @@
  
 
 .scrtabs-tab-scroll-arrow.scrtabs-disable {
-  color: #ddd;
+  color: #ddd !important;
   cursor: default; }
 
 .scrtabs-tabs-fixed-container ul.nav-tabs > li {

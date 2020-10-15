@@ -421,7 +421,7 @@ i {
 	padding: 3em 2em 2em;
 	position: relative;
 	color: rgba(black, .7);
-  border-left: 2px solid rgba(0, 0, 0, .1);
+  border-left: 1px solid rgba(0, 0, 0, .1);
 }
 
 .event-item::before {
@@ -712,7 +712,7 @@ span.fa-angle-down:hover, span.fa-angle-up:hover {
   .title {
     font-size: 1.5em;
   }
-    
+
   .img-modal {
     display: none;
   }
@@ -908,19 +908,4 @@ span.fa-angle-down:hover, span.fa-angle-up:hover {
 
 .facebook-icon-size{
   font-size: 1.7rem;
-}
-
-.scrtabs-tab-scroll-arrow-left{
-  background-image: url("../assets/left-arrow.svg") ;
-  background-repeat: no-repeat;
-  background-position-y: center;
-  background-position-y: bottom;
-
-}
-
-.scrtabs-tab-scroll-arrow-right {
-  background-image: url("../assets/right-arrow.svg") ;
-  background-repeat: no-repeat;
-  background-position-y: bottom;
-
 }
