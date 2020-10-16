@@ -9,36 +9,21 @@ $(document).ready(function () {
     btnUp = $('.btn-up');
     btnDown = $('.scroll-down');
 
-    //verify payment status
-    if (page == 'account') {
-        updatePaymentStatus();
-    }
-
-    //labels
-    $('.form-control').keyup(function (e) {
-        let elem = $(this);
-        let label = elem.siblings('.label-float');
-        if (elem.val() !== '') label.addClass('translated-label');
-        else label.removeClass('translated-label');
+    $(window).scroll( function(){
+        $('.fadein').each( function(i){
+            
+            var bottom_of_element = $(this).offset().top + $(this).outerHeight();
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+            
+            if( bottom_of_window > bottom_of_element ){
+                $(this).animate({'opacity':'1'},1000);
+            }
+            
+        }); 
     });
 
     //navbarcolor
     navColorAndBtnUp();
-
-    //phone input
-    let telInput = $('input[type=tel]');
-    if (telInput.length) {
-        let tel = onlyNumber(telInput.val());
-        let maskedTell = getMaskedTell(tel);
-
-        telInput.val(maskedTell);
-    }
-    telInput.on('keyup', () => {
-        let tel = onlyNumber(telInput.val());
-        let maskedTell = getMaskedTell(tel);
-
-        telInput.val(maskedTell);
-    });
 
     //click listeners
     btnUp.click(function (e) {
@@ -158,35 +143,6 @@ $(document).ready(function () {
             }
         });
     }
-
-    //contact request
-    $('form#contact').submit(function (e) {
-        e.preventDefault();
-
-        let data = $(this).serialize();
-        showLoader();
-        $.ajax({
-            type: "post",
-            url: "utils/contact",
-            data,
-            dataType: "json",
-            success: function (response) {
-                hideLoader();
-
-                if (response['success']) {
-                    showAlert('alert-success', 'Mensagem enviada com sucesso!');
-
-                } else {
-                    console.log(response);
-                    showAlert('alert-danger', 'Falha ao enviar mensagem. Por favor, entre em contato com a equipe do evento através do email: sctiuenf@gmail.com.');
-                }
-            },
-            error: function (e) {
-                hideLoader();
-                console.log(e);
-            }
-        });
-    });
 });
 
 

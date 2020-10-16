@@ -705,7 +705,11 @@ span.fa-angle-down:hover, span.fa-angle-up:hover {
 
   #navbarNavDropdown ul {
     margin-right: auto !important; } 
-}
+
+    .circle-discord{
+      margin-bottom: -1.5em;
+    }
+  }
 
 
 @media (max-width: 768px) {
@@ -913,4 +917,8 @@ span.fa-angle-down:hover, span.fa-angle-up:hover {
 .circle-discord {
   width: 100px;
   height: 100px;
+}
+
+.fadein {
+  opacity: 0;
 }
