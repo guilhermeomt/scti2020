@@ -705,7 +705,11 @@ span.fa-angle-down:hover, span.fa-angle-up:hover {
 
   #navbarNavDropdown ul {
     margin-right: auto !important; } 
-}
+
+    .circle-discord{
+      margin-bottom: -1.5em;
+    }
+  }
 
 
 @media (max-width: 768px) {
@@ -908,4 +912,13 @@ span.fa-angle-down:hover, span.fa-angle-up:hover {
 
 .facebook-icon-size{
   font-size: 1.7rem;
+}
+
+.circle-discord {
+  width: 100px;
+  height: 100px;
+}
+
+.fadein {
+  opacity: 0;
 }
